@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html>
+<!-- InstanceBegin template="/Templates/main.dwt" codeOutsideHTMLIsLocked="false" -->
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- InstanceBeginEditable name="doctitle" -->
+    <title>
+        Conoce cómo utilizar CRM para retener y fidelizar clientes
+    </title>
+    <!-- InstanceEndEditable -->
+    <!-----------------------------------------
+CSS
+------------------------------------------>
+    <!--Bootstrap-->
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="css/botones.css" rel="stylesheet" type="text/css" />
+    <!--Main-->
+    <link href="css/main.css" rel="stylesheet" type="text/css" />
+
+    <!--Font awesome-->
+    <link href="css/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css" />
+    <!--Animate-->
+    <link rel="stylesheet" href="css/animate.css" />
+    <!-- InstanceBeginEditable name="head" -->
+    <link rel="stylesheet" href="js/accordion/accordion.css" />
+    <!--Slider-->
+    <link rel="stylesheet" href="css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="css/owl.theme.default.min.css" />
+    <!-- InstanceEndEditable -->
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&family=Oswald:wght@300;500&display=swap" rel="stylesheet" />
+
+</head>
+
+<body>
+    <!-- Javascript-->
+    <script src="js/sweetalert2.all.min.js"></script>
+    <script type="text/javascript">
+        function imageAlert() {
+            Swal.fire({
+                position: 'top-end',
+                icon: 'success',
+                title: 'Actividad guardada',
+                showConfirmButton: false,
+                timer: 1500,
+            })
+        }
+    </script>
+
+    <!-----------------------------------------
+		HEADER
+------------------------------------------>
+    <div id="main-header-0" class="img-responsive logos-img wow animated bounceInRight" data-wow-delay="0.5"></div>
+    <div id="main-header-2" class="img-responsive logos-img wow animated bounceInLeft" data-wow-delay="0.5">
+        <div class="lista">
+            <ul>
+                <li>
+                    <a href="#" id="menu"><img src="img/Img/Btn_Menu_1.png" alt=""> </a>
+                </li>
+                <li>
+                    <a href="#" id="btn1" onclick="imageAlert()"> <img src="img/Img/Btn_Guardar_1.png" alt=""></a>
+                </li>
+                <li>
+                    <a href="#popup" id="btn2" data-toggle="modal"><img src="img/Img/Btn_Info_menu_1.png" alt=""> </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- <-------modal-------->
+    <div class="modal fade" id="popup" tabindex="-1" role="dialog" aria-hidden="true">
+
+        <div class="modal-dialog-popup" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+
+                </div>
+                <div class="modal-body">
+                    <div id="audioguia">
+                        <audio id="sound_avanzar">
+                            <source src="sound/ayuda.mpeg"></audio>
+                        <img src="img/Img/GuiaModulo.png" alt="" class="mb-6" />
+                        <!-- <----numeracin guia------------->
+                        <div style="position: absolute; top: 80px;right:215px;">
+                            <div class="Cuerpo">
+                                <div class="ubicacion-guia-botones">
+                                    <button class="redondeo ">1</button>
+                                    <div class="informacion">
+                                        <h6>MENÚ</h6>
+                                        <p>Puedes ir a otra sección del curso
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="position: absolute; top: 80px;right:157px;">
+                            <div class="Cuerpo">
+                                <div class="ubicacion-guia-botones ">
+                                    <button class="redondeo ">2</button>
+                                    <div class="informacion">
+                                        <h6>GUARDAR</h6>
+                                        <p>Graba tu avance en el módulo</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="position: absolute; top: 80px;right:92px;">
+                            <div class="Cuerpo">
+                                <div class="ubicacion-guia-botones ">
+                                    <button class="redondeo ">3</button>
+                                    <div class="informacion">
+                                        <h6>AYUDA</h6>
+                                        <p>Muestra esta ayuda de navegación</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="position: absolute; top: 365px;right:86px;">
+                            <div class="Cuerpo">
+                                <div class="ubicacion-guia-botones ">
+                                    <button class="redondeo ">4</button>
+                                    <div class="informacion">
+                                        <h6>AVANZAR</h6>
+                                        <!-- <p>Avanza a la siguiente página del módulo</p> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="position: absolute; top: 480px;right:200px;">
+                            <div class="Cuerpo">
+                                <div class="ubicacion-guia-botones ">
+                                    <button class="redondeo ">5</button>
+                                    <div class="informacion">
+                                        <h6>NUMERACIÓN</h6>
+                                        <p>Muestra el número de la página actual
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="position: absolute; top: 340px;right:375px;">
+                            <div class="Cuerpo">
+                                <div class="ubicacion-guia-botones ">
+                                    <button class="redondeo ">6</button>
+                                    <div class="informacion">
+                                        <h6>MÁS INFORMACIÓN</h6>
+                                        <!-- <p>Muestra más información</p> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="position: absolute; top: 458px;left:258px;">
+                            <div class="Cuerpo">
+                                <div class="ubicacion-guia-botones ">
+                                    <button class="redondeo ">7</button>
+                                    <div class="informacion">
+                                        <h6>PROGRESO</h6>
+                                        <p>Muestra gráficamente tu avance</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="position: absolute; top: 365px;left:68px;">
+                            <div class="Cuerpo">
+                                <div class="ubicacion-guia-botones ">
+                                    <button class="redondeo ">8</button>
+                                    <div class="informacion">
+                                        <h6>RETROCEDER</h6>
+                                        <!-- <p>Indica el progreso del usuario en el módulo</p> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer ">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-----------------------------------------
+MENU
+------------------------------------------>
+    <!--Menu opener-->
+    <div class="overlay" id="overlay">
+        <nav class="overlay-menu">
+            <ul>
+                <div class="row">
+                    <div class="col-md-10 col-sm-10 col-xs-10">
+                        <p>Menú principal</p>
+                    </div>
+                    <div class="col-md-2 col-sm-2 col-xs-2">
+                        <a class="close-menu" id="close-menu"><img src="img/icono-cerrar2.png" alt="Cerrar" width="20" height="20" /></a>
+                    </div>
+                </div>
+                <li>
+                    <a href="#" onclick="parent.postMessage('1', '*');"><i
+                            class="fa fa-home"></i>Inicio</a>
+                </li>
+                <li>
+                    <a href="#" onclick="parent.postMessage('2', '*');"><i
+                            class="fa fa-arrow-right"></i> Público
+                        objetivo</a>
+                </li>
+                <li>
+                    <a href="#" onclick="parent.postMessage('4', '*');"><i
+                            class="fa fa-arrow-right"></i>
+                        Introducción al curso</a>
+                </li>
+                <li>
+                    <a href="#" onclick="parent.postMessage('5', '*');"><i
+                            class="fa fa-arrow-right"></i> Frase
+                        memorable</a>
+                </li>
+                <li>
+                    <a href="#" onclick="parent.postMessage('6', '*');"><i
+                            class="fa fa-arrow-right"></i> Objetivos del
+                        curso</a>
+                </li>
+                <li>
+                    <a href="#" onclick="parent.postMessage('7', '*');"><i
+                            class="fa fa-arrow-right"></i> Objetivos de
+                        aprendizaje</a>
+                </li>
+                <li>
+                    <a href="#" onclick="parent.postMessage('8', '*');"><i
+                            class="fa fa-arrow-right"></i> Mapa
+                        temático</a>
+                </li>
+                <li>
+                    <a href="#" onclick="parent.postMessage('9', '*');"><i
+                            class="fa fa-arrow-right"></i> MÓDULO 1 –
+                        CRM como eje central de la estrategia del negocio </a>
+                </li>
+                <li>
+                    <a href="#" onclick="parent.postMessage('10', '*');"><i
+                            class="fa fa-arrow-right"></i>
+                        ¿Conceptualmente que significa CRM?</a>
+                </li>
+                <li>
+                    <a href="#" onclick="parent.postMessage('13', '*');"><i
+                            class="fa fa-arrow-right"></i> Definición de CRM
+                    </a>
+                </li>
+                <li>
+                    <a href="#" onclick="parent.postMessage('16', '*');"><i
+                            class="fa fa-arrow-right"></i>Ventajas del CRM para
+                        las PYMES </a>
+                </li>
+                <li>
+                    <a href="#" onclick="parent.postMessage('17', '*');"><i
+                            class="fa fa-arrow-right"></i>Importancia de la
+                        utilización de CRM</a>
+                </li>
+                <li>
+                    <a href="#" onclick="parent.postMessage('18', '*');"><i
+                            class="fa fa-arrow-right"></i>Tipos de CRM</a>
+                </li>
+                <li>
+                    <a href="#" onclick="parent.postMessage('22', '*');"><i
+                            class="fa fa-arrow-right"></i>CRM Gratis</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <!-----------------------------------------
+CONTENT
+------------------------------------------>
+
+    <!-- InstanceBeginEditable name="Content" -->
+    <audio autoplay>
+        <source src="sound/CCU CMR A15P10.mp3" type="audio/mp3" />
+    </audio>
+    <audio>
+        <source src="sound/Audio ayuda.mp3" type="audio/mp3" />
+    </audio>
+
+
+    <div class="row fondocontenidosImportancia">
+        <div class="container ">
+            <h1 class="mt-0">Importancia de la <br> utilización de CRM</h1>
+            <center>
+                <div class="zoomIn">
+                    <a href="#modal1" data-toggle="modal">
+                        <div class="circulo1" id="playPauseBtn" onclick="playPause1()"></div>
+                    </a>
+                    <a href="#modal2" data-toggle="modal">
+                        <div class="circulo2" id="playPauseBtn" onclick="playPause2()"></div>
+                    </a>
+                    <a href="#modal3" data-toggle="modal">
+                        <div class="circulo3" id="playPauseBtn" onclick="playPause3()"></div>
+                    </a>
+                    <a href="#modal4" data-toggle="modal">
+                        <div class="circulo4" id="playPauseBtn" onclick="playPause4()"></div>
+                    </a>
+                    <a href="#modal5" data-toggle="modal">
+                        <div class="circulo5" id="playPauseBtn" onclick="playPause5()"></div>
+                    </a>
+                    <a href="#modal6" data-toggle="modal">
+                        <div class="circulo6" id=" playPauseBtn" onclick="playPause6()"></div>
+                    </a>
+                    <a href="#modal7" data-toggle="modal">
+                        <div class="circulo7" id="playPauseBtn" onclick="playPause7()"></div>
+                    </a>
+                    <a href="#modal8" data-toggle="modal">
+                        <div class="circulo8" id="playPauseBtn" onclick="playPause8()"></div>
+                    </a>
+                    <a href="#modal9" data-toggle="modal">
+                        <div class="circulo9" id="playPauseBtn" onclick="playPause9()"></div>
+                    </a>
+                </div>
+
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+
+                <!-- --------boton-de-info-imágenes---------- -->
+
+                <br />
+                <div class="info">
+                    <p>clic sobre los botones para ver más información.</p>
+                </div>
+                <br />
+            </center>
+            <!-- --------boton-de-info-imágenes---------- -->
+        </div>
+        <!--container-->
+        <!-- Modal1 -->
+        <div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div id="audioplan1">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Crear estrategias para gestionar la relación con el cliente
+                            </h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <audio id="sound_avanzar_plan1">
+                                <source src="sound/CCU CMR A23P13.mp3"
+                                    type="audio/mp3" />
+                            </audio>
+                            <p>
+                                El CRM es una herramienta valiosa tanto para el personal de ventas como para el departamento de marketing de una empresa. Sin embargo, esto solo es posible si una estrategia de CRM se ha definido para que todos los esfuerzos converjan hacia un objetivo
+                                común: la satisfacción del cliente.
+                            </p>
+                            <p>
+                                El CRM también ayuda a estructurar procesos internos y a colaborar con los equipos para desarrollar una estrategia corporativa de manera integral.
+                            </p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="  btn btn-default" id="playPauseBtn" onclick="playPause1()" data-dismiss="modal">Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal1 -->
+        <!-- Modal2 -->
+        <div class="modal fade" id="modal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div id="audioplan2">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">
+                                Gestionar bases de datos</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <audio id="sound_avanzar_plan2">
+                                <source src="sound/CCU CMR A22P13.mp3"
+                                    type="audio/mp3" />
+                            </audio>
+                            <p>
+                                Los datos de los clientes se están convirtiendo tanto en la riqueza como en la prioridad de las empresas, porque ya no pueden prescindir de una base de datos de clientes. Esta incluye todos los datos de los clientes, independientemente del canal de relación.
+                                La base de datos centraliza la información del CRM, ventas y campañas de marketing. Esta base de datos única de clientes es un punto de partida para ir más allá y configurar una plataforma de gestión de datos. Al analizar
+                                estos datos, las empresas pueden realizar campañas personalizadas.
+                            </p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="  btn btn-default" id="playPauseBtn" onclick="playPause2()" data-dismiss="modal">Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal2 -->
+        <!-- Modal3 -->
+        <div class="modal fade" id="modal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div id="audioplan3">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">
+                                Concluir más ventas</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <audio id="sound_avanzar_plan3">
+                                <source src="sound/CCU CMR A20P12.mp3"
+                                    type="audio/mp3" />
+                            </audio>
+                            <p>
+                                El CRM permite mantener una relación inteligente con el cliente y hacer un seguimiento eficaz. Esto lleva a mayor segmentación y automatización de acciones que nutren prospectos y clientes potenciales hasta que estén listo para una compra.
+                            </p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="  btn btn-default" id="playPauseBtn" onclick="playPause3()" data-dismiss="modal">Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal3 -->
+        <!-- Modal4 -->
+        <div class="modal fade" id="modal4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div id="audioplan4">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">
+                                Predecir las necesidades de los clientes</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <audio id="sound_avanzar_plan4">
+                                <source src="sound/CCU CMR A18P11.mp3"
+                                    type="audio/mp3" />
+                            </audio>
+                            <p>
+                                Un CRM sirve para identificar las preferencias y crear una acción concreta que cumpla sus expectativas. Es un reto empresarial disponer de la capacidad de darle al cliente exactamente lo que quiere.
+                            </p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="  btn btn-default" id="playPauseBtn" onclick="playPause4()" data-dismiss="modal">Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal4 -->
+        <!-- Modal5 -->
+        <div class="modal fade" id="modal5" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div id="audioplan5">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">
+                                Integrar el social CRM</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <audio id="sound_avanzar_plan5">
+                                <source src="sound/CCU CMR A17P11.mp3"
+                                    type="audio/mp3" />
+                            </audio>
+                            <p>
+                                Los humanos son seres sociales por naturaleza, participan en redes sociales porque suele causar un estado emocional positivo y una sensación de bienestar.
+                            </p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="  btn btn-default" id="playPauseBtn" onclick="playPause5()" data-dismiss="modal">Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal5 -->
+        <!-- Modal6 -->
+        <div class="modal fade" id="modal6" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div id="audioplan6">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">
+                                Mejorar la experiencia del cliente</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <audio id="sound_avanzar_plan6">
+                                <source src="sound/CCU CMR A19P12.mp3"
+                                    type="audio/mp3" />
+                            </audio>
+                            <p>
+                                Para lograr mejorar la experiencia de cliente, las empresas necesitan saber cómo se sienten en su relación con éstas.
+                            </p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="  btn btn-default" id="playPauseBtn" onclick="playPause6()" data-dismiss="modal">Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal6 -->
+        <!-- Modal7 -->
+        <div class="modal fade" id="modal7" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div id="audioplan7">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">
+                                Conectar a un nivel personal</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <audio id="sound_avanzar_plan7">
+                                <source src="sound/CCU CMR A16P11.mp3"
+                                    type="audio/mp3" />
+                            </audio>
+                            <p>
+                                La importancia del CRM está en su capacidad de conectar a un nivel más personal, llevar a las compañías a ser parte de la conversación social y permitirles tomar mejores decisiones para sí mismas y para el cliente.
+                            </p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="  btn btn-default" id="playPauseBtn" onclick="playPause7()" data-dismiss="modal">Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal7 -->
+        <!-- Modal8 -->
+        <div class="modal fade" id="modal8" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div id="audioplan8">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">
+                                Automatizar las relaciones</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <audio id="sound_avanzar_plan8">
+                                <source src="sound/CCU CMR A24P13.mp3"
+                                    type="audio/mp3" />
+                            </audio>
+                            <p>
+                                Con el soporte de un software CRM, las empresas consiguen mucho más que el incremento de las ventas y una mayor organización interna.
+                            </p>
+                            <p>
+                                El CRM sirve para conocer al cliente como persona, no solo por las interacciones con la empresa, sino por su estilo de vida, sus gustos, valores y opiniones. En la era de la hiperconectividad, una marca en crecimiento diseña procesos para tomar ventajas
+                                de esa información.
+                            </p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="  btn btn-default" id="playPauseBtn" onclick="playPause8()" data-dismiss="modal">Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal8 -->
+        <!-- Modal9 -->
+        <div class="modal fade" id="modal9" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div id="audioplan9">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">
+                                Automatizar las relaciones</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <audio id="sound_avanzar_plan9">
+                                <source src="sound/CCU CMR A24P13.mp3"
+                                    type="audio/mp3" />
+                            </audio>
+                            <p>
+                                Con el soporte de un software CRM, las empresas consiguen mucho más que el incremento de las ventas y una mayor organización interna.
+                            </p>
+                            <p>
+                                El CRM sirve para conocer al cliente como persona, no solo por las interacciones con la empresa, sino por su estilo de vida, sus gustos, valores y opiniones. En la era de la hiperconectividad, una marca en crecimiento diseña procesos para tomar ventajas
+                                de esa información.
+                            </p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="  btn btn-default" id="playPauseBtn" onclick="playPause9()" data-dismiss="modal">Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal9 -->
+
+    </div>
+
+
+    <!-- InstanceEndEditable -->
+
+    <!-----------------------------------------
+FOOTER
+------------------------------------------>
+    <div id="footer">
+        <div class="container">
+            <div class="progress progress-striped active">
+                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 61%">
+                    <span class="sr-only">16% completado</span>
+                </div>
+            </div>
+            <div class="inner-footer">
+                <!--<div class="next-prev"> InstanceBeginEditable name="Navegacion lineal" <a href="16.html"></a>-->
+                <p class="pr-4 pl-4">Página 17 / 37</p>
+                <!--<a href="18.html"></a>  InstanceEndEditable </div>-->
+            </div>
+        </div>
+    </div>
+
+    <!-----------------------------------------
+JAVASCRIPT
+------------------------------------------>
+    <!--Jquery-->
+    <script src="js/jquery.js "></script>
+
+    <!--Bootstrap-->
+    <script src="js/modal.js "></script>
+    <!--main-->
+    <script src="js/main.js "></script>
+
+    <!--wow-->
+    <script src="js/wow.js "></script>
+    <!-- InstanceBeginEditable name="Javascript " -->
+    <script src="js/accordion/accordion.js "></script>
+    <script src="js/owl.carousel.min.js "></script>
+    <script>
+        var owl = $('.owl-carousel');
+        owl.owlCarousel({
+            loop: false,
+            nav: true,
+            margin: 20,
+            responsive: {
+                0: {
+                    items: 1
+                },
+
+
+            }
+        });
+        owl.on('mousewheel', '.owl-stage', function(e) {
+            if (e.deltaY > 0) {
+                owl.trigger('next.owl');
+            } else {
+                owl.trigger('prev.owl');
+            }
+            e.preventDefault();
+        });
+    </script>
+    <script>
+        var sonido = $("#sound_avanzar ")[0];
+        $("#audioguia ")
+            .mouseenter(function() {
+                sonido.play();
+            });
+        var sonido1 = $("#sound_avanzar_plan1")[0];
+        var count = 0;
+        $("#audioplan1")
+            .mouseenter(function() {
+                sonido1.play();
+            });
+        var sonido2 = $("#sound_avanzar_plan2")[0];
+        $("#audioplan2")
+            .mouseenter(function() {
+                sonido2.play();
+            });
+        var sonido3 = $("#sound_avanzar_plan3")[0];
+        $("#audioplan3")
+            .mouseenter(function() {
+                sonido3.play();
+            });
+        var sonido4 = $("#sound_avanzar_plan4")[0];
+        $("#audioplan4")
+            .mouseenter(function() {
+                sonido4.play();
+            });
+        var sonido5 = $("#sound_avanzar_plan5")[0];
+        $("#audioplan5")
+            .mouseenter(function() {
+                sonido5.play();
+            });
+        var sonido6 = $("#sound_avanzar_plan6")[0];
+        $("#audioplan6")
+            .mouseenter(function() {
+                sonido6.play();
+            });
+        var sonido7 = $("#sound_avanzar_plan7")[0];
+        $("#audioplan7")
+            .mouseenter(function() {
+                sonido7.play();
+            });
+        var sonido8 = $("#sound_avanzar_plan8")[0];
+        $("#audioplan8")
+            .mouseenter(function() {
+                sonido8.play();
+            });
+        var sonido9 = $("#sound_avanzar_plan9")[0];
+        $("#audioplan9")
+            .mouseenter(function() {
+                sonido9.play();
+            });
+    </script>
+    <!--Active menu element-->
+    <script>
+        $('.overlay ul li:nth-child(4) a').addClass('active')
+    </script>
+    <!-- InstanceEndEditable -->
+</body>
+<!-- InstanceEnd -->
+
+</html>

@@ -1,0 +1,131 @@
+/***********************************************************************************************************************
+DOCUMENT: style/format.css
+DEVELOPED BY: Ryan Stemkoski
+COMPANY: Zipline Interactive
+EMAIL: ryan@gozipline.com
+PHONE: 509-321-2849
+DATE: 2/26/2009
+DESCRIPTION: This document contains the structural formatting files for the accordion style menu.
+************************************************************************************************************************/
+
+:root {
+    --colorPrimarioModulo: #008e89;
+    --colorPrimarioModuloytransparente: #008e894b;
+}
+
+.accordionWrapper {
+    /* box-sizing: border-box;
+  background: white;
+  border: solid 1px #ccc; */
+    padding: 1px 1px 0 1px;
+    width: 100%;
+    margin-left: 0px;
+}
+
+.accordionWrapper:before,
+.accordionWrapper:after {
+    display: table;
+    content: ' ';
+    margin-left: 25px;
+}
+
+.accordionWrapper:after {
+    clear: both;
+}
+
+.accordionWrapper:before,
+.accordionWrapper:after {
+    display: table;
+    content: ' ';
+    margin-left: 25px;
+}
+
+.accordionButton {
+    background: rgba(255, 255, 255, 0.6);
+    box-sizing: border-box;
+    width: 100%;
+    float: left;
+    _float: none;
+    /* Float works in all browsers but IE6 */
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;
+    padding: 15px 75px 15px 25px;
+    font-size: 20px;
+    margin-top: 2px;
+    position: relative;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+
+.accordionButton:last-child {
+    border-bottom: 0px solid #ccc !important;
+}
+
+.accordionButton:before {
+    content: '+';
+    color: var(--colorPrimarioModulo);
+    position: absolute;
+    font-size: 30px;
+    line-height: 55px;
+    width: 55px;
+    background: transparent;
+    display: block;
+    text-align: center;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-left: 25px;
+}
+
+.accordionContent {
+    border: none;
+    border-bottom: 10px;
+    background: var(--colorPrimarioModuloytransparente);
+    backdrop-filter: blur(2px);
+    box-sizing: border-box;
+    width: 100%;
+    float: left;
+    _float: none;
+    /* Float works in all browsers but IE6 */
+    padding: 25px;
+    border-bottom: 1px solid #ccc;
+}
+
+.accordionContent:last-child {
+    border-bottom: 0px solid #ccc !important;
+}
+
+
+/***********************************************************************************************************************
+ EXTRA STYLES ADDED FOR MOUSEOVER / ACTIVE EVENTS
+************************************************************************************************************************/
+
+.on,
+.on:hover {
+    border-bottom: 0px solid #ccc;
+}
+
+.accordionButton.on {
+    background: white;
+}
+
+.accordionButton.on:before {
+    /*	content:"-";
+
+background:#c62128;
+	color:white;*/
+    -moz-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.over {
+    /*background: rgba(0,0,0,0.1);*/
+    color: #02516c;
+}

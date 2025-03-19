@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html>
+<!-- InstanceBegin template="/Templates/main.dwt" codeOutsideHTMLIsLocked="false" -->
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- InstanceBeginEditable name="doctitle" -->
+    <title>
+        Conoce cómo utilizar CRM para retener y fidelizar clientes
+    </title>
+    <!-- InstanceEndEditable -->
+    <!-----------------------------------------
+CSS
+------------------------------------------>
+    <!--Bootstrap-->
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="css/botones.css" rel="stylesheet" type="text/css" />
+    <!--Main-->
+    <link href="css/main.css" rel="stylesheet" type="text/css" />
+
+    <!--Font awesome-->
+    <link href="css/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css" />
+    <!--Animate-->
+    <link rel="stylesheet" href="css/animate.css" />
+    <!-- InstanceBeginEditable name="head" -->
+    <link rel="stylesheet" href="js/accordion/accordion.css" />
+    <!--Slider-->
+    <link rel="stylesheet" href="css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="css/owl.theme.default.min.css" />
+    <!-- InstanceEndEditable -->
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&family=Oswald:wght@300;500&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- Javascript-->
+    <script src="js/sweetalert2.all.min.js"></script>
+    <script type="text/javascript">
+        function imageAlert() {
+            Swal.fire({
+                position: 'top-end',
+                icon: 'success',
+                title: 'Actividad guardada',
+                showConfirmButton: false,
+                timer: 1500,
+            })
+        }
+    </script>
+
+    <!-----------------------------------------
+		HEADER
+------------------------------------------>
+    <div id="main-header-0" class="img-responsive logos-img wow animated bounceInRight" data-wow-delay="0.5"></div>
+    <div id="main-header-2" class="img-responsive logos-img wow animated bounceInLeft" data-wow-delay="0.5">
+        <div class="lista">
+            <ul>
+                <li>
+                    <a href="#" id="menu"><img src="img/Img/Btn_Menu_1.png" alt=""> </a>
+                </li>
+                <li>
+                    <a href="#" id="btn1" onclick="imageAlert()"> <img src="img/Img/Btn_Guardar_1.png" alt=""></a>
+                </li>
+                <li>
+                    <a href="#popup" id="btn2" data-toggle="modal"><img src="img/Img/Btn_Info_menu_1.png" alt=""> </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- <-------modal-------->
+    <div class="modal fade" id="popup" tabindex="-1" role="dialog" aria-hidden="true">
+
+        <div class="modal-dialog-popup" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+
+                </div>
+                <div class="modal-body">
+                    <div id="audioguia">
+                        <audio id="sound_avanzar">
+                            <source src="sound/Audio ayuda.mp3"></audio>
+                        <img src="img/Img/GuiaModulo.png" alt="" class="mb-6" />
+                        <!-- <----numeracin guia------------->
+                        <div style="position: absolute; top: 80px;right:215px;">
+                            <div class="Cuerpo">
+                                <div class="ubicacion-guia-botones">
+                                    <button class="redondeo ">1</button>
+                                    <div class="informacion">
+                                        <h6>MENÚ</h6>
+                                        <p>Puedes ir a otra sección del curso
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="position: absolute; top: 80px;right:157px;">
+                            <div class="Cuerpo">
+                                <div class="ubicacion-guia-botones ">
+                                    <button class="redondeo ">2</button>
+                                    <div class="informacion">
+                                        <h6>GUARDAR</h6>
+                                        <p>Graba tu avance en el módulo</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="position: absolute; top: 80px;right:92px;">
+                            <div class="Cuerpo">
+                                <div class="ubicacion-guia-botones ">
+                                    <button class="redondeo ">3</button>
+                                    <div class="informacion">
+                                        <h6>AYUDA</h6>
+                                        <p>Muestra esta ayuda de navegación</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="position: absolute; top: 365px;right:86px;">
+                            <div class="Cuerpo">
+                                <div class="ubicacion-guia-botones ">
+                                    <button class="redondeo ">4</button>
+                                    <div class="informacion">
+                                        <h6>AVANZAR</h6>
+                                        <!-- <p>Avanza a la siguiente página del módulo</p> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="position: absolute; top: 480px;right:200px;">
+                            <div class="Cuerpo">
+                                <div class="ubicacion-guia-botones ">
+                                    <button class="redondeo ">5</button>
+                                    <div class="informacion">
+                                        <h6>NUMERACIÓN</h6>
+                                        <p>Muestra el número de la página actual
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="position: absolute; top: 340px;right:375px;">
+                            <div class="Cuerpo">
+                                <div class="ubicacion-guia-botones ">
+                                    <button class="redondeo ">6</button>
+                                    <div class="informacion">
+                                        <h6>MÁS INFORMACIÓN</h6>
+                                        <!-- <p>Muestra más información</p> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="position: absolute; top: 458px;left:258px;">
+                            <div class="Cuerpo">
+                                <div class="ubicacion-guia-botones ">
+                                    <button class="redondeo ">7</button>
+                                    <div class="informacion">
+                                        <h6>PROGRESO</h6>
+                                        <p>Muestra gráficamente tu avance</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="position: absolute; top: 365px;left:68px;">
+                            <div class="Cuerpo">
+                                <div class="ubicacion-guia-botones ">
+                                    <button class="redondeo ">8</button>
+                                    <div class="informacion">
+                                        <h6>RETROCEDER</h6>
+                                        <!-- <p>Indica el progreso del usuario en el módulo</p> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="modal-footer ">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-----------------------------------------
+MENU
+------------------------------------------>
+    <!--Menu opener-->
+    <div class="overlay" id="overlay">
+        <nav class="overlay-menu">
+            <ul>
+                <div class="row">
+                    <div class="col-md-10 col-sm-10 col-xs-10">
+                        <p>Menú principal</p>
+                    </div>
+                    <div class="col-md-2 col-sm-2 col-xs-2">
+                        <a class="close-menu" id="close-menu"><img src="img/icono-cerrar2.png" alt="Cerrar" width="20" height="20" /></a>
+                    </div>
+                </div>
+                <li>
+                    <a href="#" onclick="parent.postMessage('1', '*');"><i
+                            class="fa fa-home"></i>Inicio</a>
+                </li>
+                <li>
+                    <a href="#" onclick="parent.postMessage('2', '*');"><i
+                            class="fa fa-arrow-right"></i> Público
+                        objetivo</a>
+                </li>
+                <li>
+                    <a href="#" onclick="parent.postMessage('4', '*');"><i
+                            class="fa fa-arrow-right"></i>
+                        Introducción al curso</a>
+                </li>
+                <li>
+                    <a href="#" onclick="parent.postMessage('5', '*');"><i
+                            class="fa fa-arrow-right"></i> Frase
+                        memorable</a>
+                </li>
+                <li>
+                    <a href="#" onclick="parent.postMessage('6', '*');"><i
+                            class="fa fa-arrow-right"></i> Objetivos del
+                        curso</a>
+                </li>
+                <li>
+                    <a href="#" onclick="parent.postMessage('7', '*');"><i
+                            class="fa fa-arrow-right"></i> Objetivos de
+                        aprendizaje</a>
+                </li>
+                <li>
+                    <a href="#" onclick="parent.postMessage('8', '*');"><i
+                            class="fa fa-arrow-right"></i> Mapa
+                        temático</a>
+                </li>
+                <li>
+                    <a href="#" onclick="parent.postMessage('9', '*');"><i
+                            class="fa fa-arrow-right"></i> MÓDULO 1 –
+                        CRM como eje central de la estrategia del negocio </a>
+                </li>
+                <li>
+                    <a href="#" onclick="parent.postMessage('10', '*');"><i
+                            class="fa fa-arrow-right"></i>
+                        ¿Conceptualmente que significa CRM?</a>
+                </li>
+                <li>
+                    <a href="#" onclick="parent.postMessage('13', '*');"><i
+                            class="fa fa-arrow-right"></i> Definición de CRM
+                    </a>
+                </li>
+                <li>
+                    <a href="#" onclick="parent.postMessage('16', '*');"><i
+                            class="fa fa-arrow-right"></i>Ventajas del CRM para
+                        las PYMES </a>
+                </li>
+                <li>
+                    <a href="#" onclick="parent.postMessage('17', '*');"><i
+                            class="fa fa-arrow-right"></i>Importancia de la
+                        utilización de CRM</a>
+                </li>
+                <li>
+                    <a href="#" onclick="parent.postMessage('18', '*');"><i
+                            class="fa fa-arrow-right"></i>Tipos de CRM</a>
+                </li>
+                <li>
+                    <a href="#" onclick="parent.postMessage('22', '*');"><i
+                            class="fa fa-arrow-right"></i>CRM Gratis</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <!-----------------------------------------
+CONTENT
+------------------------------------------>
+
+    <!-- InstanceBeginEditable name="Content" -->
+    <audio autoplay>
+        <source src="sound/CCU CMR A11P9.mp3" type="audio/mp3" />
+    </audio>
+
+    <div class="row fondocontenidos">
+        <div class="container">
+            <h1 class="mt-0">Ventajas del CRM para las PYMES</h1>
+            <br>
+            <br>
+            <div class="col-md-4">
+                <div class="cuerpocard3d wow animated bounceInUp delay-1s">
+                    <div class="card3d">
+                        <div class="cara adelante capital">
+                            <img src="img/Img/almacenaje.png">
+                            <h2>
+                                Almacena información en un lugar único.
+                            </h2>
+                        </div>
+                        <div class="cara atras ">
+                            <h2 class="textCard">
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+                                <div class="container-btn-ligyh-luz">
+                                    <div class="btn-light-luz_info">
+                                        <a href="#modal1" data-toggle="modal"><img src="img/Img/info.png" />
+                                            <div id="playPauseBtn" onclick="playPause1()"></div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="cuerpocard3d wow animated bounceInUp delay-2s">
+                    <div class="card3d">
+                        <div class="cara adelante capital">
+                            <img src="img/Img/modeloNegocio.png">
+                            <h2>
+                                La productividad de la empresa y del equipo
+                            </h2>
+                        </div>
+                        <div class="cara atras ">
+                            <h2 class="textCard">
+
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+                                <div class="container-btn-ligyh-luz">
+                                    <div class="btn-light-luz_info">
+                                        <a href="#modal2" data-toggle="modal"><img src="img/Img/info.png" />
+                                            <div id="playPauseBtn" onclick="playPause2()"></div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="cuerpocard3d wow animated bounceInUp delay-3s">
+                    <div class="card3d">
+                        <div class="cara adelante capital">
+                            <img src="img/Img/innovacion.png">
+                            <h2>
+                                Acelerar el ciclo de ventas
+                            </h2>
+                        </div>
+                        <div class="cara atras ">
+                            <h2 class="textCard">
+
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+                                <div class="container-btn-ligyh-luz">
+                                    <div class="btn-light-luz_info">
+                                        <a href="#modal3" data-toggle="modal"><img src="img/Img/info.png" />
+                                            <div id="playPauseBtn" onclick="playPause3()"></div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <br>
+
+        <center>
+            <div class="info">
+                <p>Haga clic en las imagenes para ver más información.</p>
+            </div>
+            <br />
+        </center>
+        <!-- --------final-boton-de-info-botones---------- -->
+    </div>
+    </div>
+
+    <!-- Modal1 -->
+    <div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div id="audioplan1">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Almacena información en un lugar único.
+                        </h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <audio id="sound_avanzar_plan1">
+                            <source src="sound/CCU CMR A12P9.mp3 "
+                                type="audio/mp3">
+                        </audio>
+                        <p>
+                            Centralizar la información impulsa la automatización de procesos y el establecimiento de protocolos. La gestión de los datos de forma offline supone grandes riesgos para la compañía y genera ineficiencias en el trabajo diario de los funcionarios. Con
+                            los nuevos sistemas de trabajo, mucho más efectivos y seguros, las hojas de Excel y las agendas quedan a un lado.
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" id="playPauseBtn" onclick="playPause1()" data-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal1 -->
+    <!-- Modal2 -->
+    <div class="modal fade" id="modal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div id="audioplan2">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Mejora la productividad de la empresa y del equipo
+                        </h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <audio id="sound_avanzar_plan2">
+                            <source src="sound/CCU CMR A13P10.mp3 "
+                                type="audio/mp3">
+                        </audio>
+                        <p>
+                            Contar con un protocolo para la gestión de clientes hace que cada acción comercial sea más efectiva. Automatizar los avisos de seguimiento de oportunidades, registrar las llamadas y anotar conversaciones permite a los equipos comerciales manejar de forma
+                            más eficiente toda la información. Cuando trabajamos de memoria, olvidamos muchos datos y matices que pueden ser claves en el proceso de negociación con los clientes.
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" id="playPauseBtn" onclick="playPause2()" data-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal2 -->
+    <!-- Modal3 -->
+    <div class="modal fade" id="modal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div id="audioplan3">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Acelerar el ciclo de ventas </h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <audio id="sound_avanzar_plan3">
+                            <source src="sound/CCU CMR A14P10.mp3 "
+                                type="audio/mp3">
+                        </audio>
+                        <p>
+                            El CRM permite trabajar de forma más organizada y estandarizada evitando ineficiencias y, en consecuencia, acelerando los procesos de venta. Además, concentrar la información en un lugar único hace posible el análisis de los datos, la interpretación de
+                            estos y la extracción de conclusiones.
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" id="playPauseBtn" onclick="playPause3()" data-dismiss="modal">Cerrar</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal3 -->
+
+
+    <!-- InstanceEndEditable -->
+
+    <!-----------------------------------------
+FOOTER
+------------------------------------------>
+    <div id="footer">
+        <div class="container">
+            <div class="progress progress-striped active">
+                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 57%">
+                    <span class="sr-only">16% completado</span>
+                </div>
+            </div>
+            <div class="inner-footer">
+                <!--<div class="next-prev"> InstanceBeginEditable name="Navegacion lineal" <a href="16.html"></a>-->
+                <p class="pr-4 pl-4">Página 16 / 37</p>
+                <!--<a href="18.html"></a>  InstanceEndEditable </div>-->
+            </div>
+        </div>
+    </div>
+
+    <!-----------------------------------------
+JAVASCRIPT
+------------------------------------------>
+    <!--Jquery-->
+    <script src="js/jquery.js"></script>
+
+    <!--Bootstrap-->
+    <script src="js/modal.js"></script>
+    <!--main-->
+    <script src="js/main.js"></script>
+
+    <!--wow-->
+    <script src="js/wow.js"></script>
+    <!-- InstanceBeginEditable name="Javascript" -->
+    <script src="js/accordion/accordion.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/index.js"></script>
+    <script>
+        var owl = $('.owl-carousel');
+        owl.owlCarousel({
+            loop: false,
+            nav: true,
+            margin: 20,
+            responsive: {
+                0: {
+                    items: 1
+                },
+
+
+            }
+        });
+        owl.on('mousewheel', '.owl-stage', function(e) {
+            if (e.deltaY > 0) {
+                owl.trigger('next.owl');
+            } else {
+                owl.trigger('prev.owl');
+            }
+            e.preventDefault();
+        });
+    </script>
+    <script>
+        var sonido = $("#sound_avanzar")[0];
+        $("#audioguia")
+            .mouseenter(function() {
+                sonido.play();
+            });
+        var sonido1 = $("#sound_avanzar_plan1")[0];
+        $("#audioplan1")
+            .mouseenter(function() {
+                sonido1.play();
+            });
+        var sonido2 = $("#sound_avanzar_plan2")[0];
+        $("#audioplan2")
+            .mouseenter(function() {
+                sonido2.play();
+            });
+        var sonido3 = $("#sound_avanzar_plan3")[0];
+        $("#audioplan3")
+            .mouseenter(function() {
+                sonido3.play();
+            });
+    </script>
+    <!--Active menu element-->
+    <script>
+        $('.overlay ul li:nth-child(4) a').addClass('active')
+    </script>
+    <!-- InstanceEndEditable -->
+</body>
+<!-- InstanceEnd -->
+
+</html>
