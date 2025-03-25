@@ -1,31 +1,31 @@
-//Editar//-------------------------------------------------------------------------------------------------------------------------------
-var CantidadEscenas = 28
-var CantidadEnlacesMenu = 7
-var CantidadAdicional = 2
-var AnchoEscena = 1920
-var AltoEscena = 1080
-var TieneIndicador = true
-var UsarPrecarga = false
-var tiemposesion
-var segundos = '00'
-var minutos = '00'
-var horas = '00'
+    //Editar//-------------------------------------------------------------------------------------------------------------------------------
+var CantidadEscenas     =  19
+var CantidadEnlacesMenu =  5
+var CantidadAdicional   =  2
+var AnchoEscena         =  1920
+var AltoEscena          =  1080
+var TieneIndicador      =  true
+var UsarPrecarga        =  false
+var tiemposesion;
+var segundos =  '00'
+var minutos  =  '00'
+var horas    =  '00'
 
-var ActivarScorm = true
-var TieneBarraPorcentaje = false
-var UtilizaFondos = false
+var ActivarScorm         =  true
+var TieneBarraPorcentaje =  false
+var UtilizaFondos        =  false
 
 var BtnContinuar =
     '<img src="recursos/boton_inicio.png" width="251" style="cursor: pointer; position: absolute; right: 320px; bottom: 20px;" id="BotonIntro">'
 var ImgCargando =
     '<img src="recursos/cargandodatos.gif" width="240" style="padding-top:270px;">'
-var ImgFondoInicio = '<img src="recursos/fondo_inicio.jpg" >'
+var ImgFondoInicio =  '<img src="recursos/fondo_inicio.jpg" >'
 
 var NombreModulo =
-    'Conoce cómo utilizar CRM para retener y fidelizar clientes'
+    'Conozca las herramientas y los beneficios de contar con sus inventarios automatizados'
 
-var URLModulo = 'http://www.4evirtual.com/course/view.php?id=9'
-var URLInicio = 'http://www.4evirtual.com/'
+var URLModulo =  'http://www.4evirtual.com/course/view.php?id=9'
+var URLInicio =  'http://www.4evirtual.com/'
 
 var ArrayAudios = [
     { src: 'Vacio.mp3', id: 'Vacio' },
@@ -47,85 +47,85 @@ var ArrayAudios = [
     { src: 'E13.mp3', id: 'E13' },
 ]
 
-//Datos Escena//-------------------------------------------------------------------------------------------------------------------------------
-var InfoEscena = new Array(CantidadEscenas)
-var TitulosMenu = new Array(CantidadEnlacesMenu)
-var TitulosAdicional = new Array(CantidadAdicional)
+    //Datos Escena//-------------------------------------------------------------------------------------------------------------------------------
+var InfoEscena       =  new Array(CantidadEscenas)
+var TitulosMenu      =  new Array(CantidadEnlacesMenu)
+var TitulosAdicional =  new Array(CantidadAdicional)
 
-InfoEscena[0] = ['1', 'Bienvenido(a)', 'fondo0', 1]
-InfoEscena[1] = ['2', 'Contenido', 'fondo0', 1]
-InfoEscena[2] = ['3', 'Tratamiento del cáncer de próstata', 'fondo0', 1]
-InfoEscena[3] = ['4', 'Tratamiento del cáncer de próstata', 'fondo0', 1]
-InfoEscena[4] = ['5', 'Tratamiento del cáncer de próstata', 'fondo0', 1]
-InfoEscena[5] = ['6', 'Tratamiento del cáncer de próstata', 'fondo0', 1]
-InfoEscena[6] = ['7', 'Tratamiento del cáncer de próstata', 'fondo0', 1]
-InfoEscena[7] = ['8', 'Tratamiento del cáncer de próstata', 'fondo0', 1]
-InfoEscena[8] = ['9', 'Tratamiento del cáncer de próstata', 'fondo0', 1]
-InfoEscena[9] = ['10', 'Tratamiento del cáncer de próstata', 'fondo0', 1]
-InfoEscena[10] = ['11', 'Tratamiento del cáncer de próstata', 'fondo0', 1]
-InfoEscena[11] = ['12', 'Tratamiento del cáncer de próstata', 'fondo0', 1]
-InfoEscena[12] = ['13', 'Tratamiento del cáncer de próstata', 'fondo0', 1]
-InfoEscena[13] = ['14', 'Tratamiento del cáncer de próstata', 'fondo0', 1]
-InfoEscena[14] = ['15', 'Tratamiento del cáncer de próstata', 'fondo0', 1]
-InfoEscena[15] = ['16', 'Tratamiento del cáncer de próstata', 'fondo0', 1]
-InfoEscena[16] = ['17', 'Tratamiento del cáncer de próstata', 'fondo0', 1]
-InfoEscena[17] = ['18', 'Tratamiento del cáncer de próstata', 'fondo0', 1]
-InfoEscena[18] = ['19', 'Tratamiento del cáncer de próstata', 'fondo0', 1]
-InfoEscena[19] = ['20', 'Tratamiento del cáncer de próstata', 'fondo0', 1]
-InfoEscena[20] = ['21', 'Tratamiento del cáncer de próstata', 'fondo0', 1]
-InfoEscena[21] = ['22', 'Tratamiento del cáncer de próstata', 'fondo0', 1]
-InfoEscena[22] = ['23', 'Tratamiento del cáncer de próstata', 'fondo0', 1]
-InfoEscena[23] = ['24', 'Tratamiento del cáncer de próstata', 'fondo0', 1]
-InfoEscena[24] = ['25', 'Tratamiento del cáncer de próstata', 'fondo0', 1]
-InfoEscena[25] = ['26', 'Tratamiento del cáncer de próstata', 'fondo0', 1]
-InfoEscena[26] = ['27', 'Tratamiento del cáncer de próstata', 'fondo0', 1]
-InfoEscena[27] = ['28', 'Tratamiento del cáncer de próstata', 'fondo0', 1]
-InfoEscena[28] = ['29', 'Tratamiento del cáncer de próstata', 'fondo0', 1]
-InfoEscena[29] = ['30', 'Tratamiento del cáncer de próstata', 'fondo0', 1]
-InfoEscena[30] = ['31', 'Tratamiento del cáncer de próstata', 'fondo0', 1]
-InfoEscena[31] = ['32', 'Tratamiento del cáncer de próstata', 'fondo0', 1]
-InfoEscena[32] = ['33', 'Tratamiento del cáncer de próstata', 'fondo0', 1]
-InfoEscena[33] = ['34', 'Tratamiento del cáncer de próstata', 'fondo0', 1]
-InfoEscena[34] = ['35', 'Tratamiento del cáncer de próstata', 'fondo0', 1]
-InfoEscena[35] = ['36', 'Tratamiento del cáncer de próstata', 'fondo0', 1]
-InfoEscena[36] = ['37', 'Tratamiento del cáncer de próstata', 'fondo0', 1]
-InfoEscena[37] = ['38', 'Tratamiento del cáncer de próstata', 'fondo0', 1]
-InfoEscena[38] = ['39', 'Tratamiento del cáncer de próstata', 'fondo0', 1]
-InfoEscena[39] = ['40', 'Tratamiento del cáncer de próstata', 'fondo0', 1]
-InfoEscena[40] = ['41', 'Tratamiento del cáncer de próstata', 'fondo0', 1]
-InfoEscena[41] = ['42', 'Tratamiento del cáncer de próstata', 'fondo0', 1]
-InfoEscena[42] = ['43', 'Tratamiento del cáncer de próstata', 'fondo0', 1]
-InfoEscena[43] = ['44', 'Tratamiento del cáncer de próstata', 'fondo0', 1]
-InfoEscena[44] = ['45', 'Tratamiento del cáncer de próstata', 'fondo0', 1]
-InfoEscena[45] = ['46', 'Tratamiento del cáncer de próstata', 'fondo0', 1]
-
-
+InfoEscena[0]  =  ['1', 'Bienvenido(a)', 'fondo0', 1]
+InfoEscena[1]  =  ['2', 'Contenido', 'fondo0', 1]
+InfoEscena[2]  =  ['3', 'Tratamiento del cáncer de próstata', 'fondo0', 1]
+InfoEscena[3]  =  ['4', 'Tratamiento del cáncer de próstata', 'fondo0', 1]
+InfoEscena[4]  =  ['5', 'Tratamiento del cáncer de próstata', 'fondo0', 1]
+InfoEscena[5]  =  ['6', 'Tratamiento del cáncer de próstata', 'fondo0', 1]
+InfoEscena[6]  =  ['7', 'Tratamiento del cáncer de próstata', 'fondo0', 1]
+InfoEscena[7]  =  ['8', 'Tratamiento del cáncer de próstata', 'fondo0', 1]
+InfoEscena[8]  =  ['9', 'Tratamiento del cáncer de próstata', 'fondo0', 1]
+InfoEscena[9]  =  ['10', 'Tratamiento del cáncer de próstata', 'fondo0', 1]
+InfoEscena[10] =  ['11', 'Tratamiento del cáncer de próstata', 'fondo0', 1]
+InfoEscena[11] =  ['12', 'Tratamiento del cáncer de próstata', 'fondo0', 1]
+InfoEscena[12] =  ['13', 'Tratamiento del cáncer de próstata', 'fondo0', 1]
+InfoEscena[13] =  ['14', 'Tratamiento del cáncer de próstata', 'fondo0', 1]
+InfoEscena[14] =  ['15', 'Tratamiento del cáncer de próstata', 'fondo0', 1]
+InfoEscena[15] =  ['16', 'Tratamiento del cáncer de próstata', 'fondo0', 1]
+InfoEscena[16] =  ['17', 'Tratamiento del cáncer de próstata', 'fondo0', 1]
+InfoEscena[17] =  ['18', 'Tratamiento del cáncer de próstata', 'fondo0', 1]
+InfoEscena[18] =  ['19', 'Tratamiento del cáncer de próstata', 'fondo0', 1]
+InfoEscena[19] =  ['20', 'Tratamiento del cáncer de próstata', 'fondo0', 1]
+InfoEscena[20] =  ['21', 'Tratamiento del cáncer de próstata', 'fondo0', 1]
+InfoEscena[21] =  ['22', 'Tratamiento del cáncer de próstata', 'fondo0', 1]
+InfoEscena[22] =  ['23', 'Tratamiento del cáncer de próstata', 'fondo0', 1]
+InfoEscena[23] =  ['24', 'Tratamiento del cáncer de próstata', 'fondo0', 1]
+InfoEscena[24] =  ['25', 'Tratamiento del cáncer de próstata', 'fondo0', 1]
+InfoEscena[25] =  ['26', 'Tratamiento del cáncer de próstata', 'fondo0', 1]
+InfoEscena[26] =  ['27', 'Tratamiento del cáncer de próstata', 'fondo0', 1]
+InfoEscena[27] =  ['28', 'Tratamiento del cáncer de próstata', 'fondo0', 1]
+InfoEscena[28] =  ['29', 'Tratamiento del cáncer de próstata', 'fondo0', 1]
+InfoEscena[29] =  ['30', 'Tratamiento del cáncer de próstata', 'fondo0', 1]
+InfoEscena[30] =  ['31', 'Tratamiento del cáncer de próstata', 'fondo0', 1]
+InfoEscena[31] =  ['32', 'Tratamiento del cáncer de próstata', 'fondo0', 1]
+InfoEscena[32] =  ['33', 'Tratamiento del cáncer de próstata', 'fondo0', 1]
+InfoEscena[33] =  ['34', 'Tratamiento del cáncer de próstata', 'fondo0', 1]
+InfoEscena[34] =  ['35', 'Tratamiento del cáncer de próstata', 'fondo0', 1]
+InfoEscena[35] =  ['36', 'Tratamiento del cáncer de próstata', 'fondo0', 1]
+InfoEscena[36] =  ['37', 'Tratamiento del cáncer de próstata', 'fondo0', 1]
+InfoEscena[37] =  ['38', 'Tratamiento del cáncer de próstata', 'fondo0', 1]
+InfoEscena[38] =  ['39', 'Tratamiento del cáncer de próstata', 'fondo0', 1]
+InfoEscena[39] =  ['40', 'Tratamiento del cáncer de próstata', 'fondo0', 1]
+InfoEscena[40] =  ['41', 'Tratamiento del cáncer de próstata', 'fondo0', 1]
+InfoEscena[41] =  ['42', 'Tratamiento del cáncer de próstata', 'fondo0', 1]
+InfoEscena[42] =  ['43', 'Tratamiento del cáncer de próstata', 'fondo0', 1]
+InfoEscena[43] =  ['44', 'Tratamiento del cáncer de próstata', 'fondo0', 1]
+InfoEscena[44] =  ['45', 'Tratamiento del cáncer de próstata', 'fondo0', 1]
+InfoEscena[45] =  ['46', 'Tratamiento del cáncer de próstata', 'fondo0', 1]
 
 
-//Datos Menu//-------------------------------------------------------------------------------------------------------------------------------
-//TitulosMenu[0] = ["\t\t   Inicio",1];//
-//TitulosMenu[1] = ["\t\t   Conceptos de valoración de empresas.",3];//
-//TitulosMenu[2] = ["\t\t   Diligenciar la herramienta de valoración de empresas.",10];//
-//TitulosMenu[3] = ["\t\t   Análisis y explicación de las fuentes de los capitales de riesgo.",16];//
-//TitulosMenu[4] = ["\t\t   Establecer las diferencias entre crédito, crowdfunding, crowdlending, crowdsourcing e inversión.",23];//
-//TitulosMenu[5] = ["\t\t   Dar a conocer los programas de inversión que ofrece la CCB y cómo acceder a estos.",29];//
-//TitulosMenu[6] = ["\t\t   Validación de conocimientos",33];//
 
-//TitulosAdicional[0]= ["     Legal",1];//
-//TitulosAdicional[1]= ["     Ayuda",1];//
-//Inicio//-------------------------------------------------------------------------------------------------------------------------------
 
-var EscenaActual = 1
+    //Datos Menu//-------------------------------------------------------------------------------------------------------------------------------
+    //TitulosMenu[0] = ["\t\t   Inicio",1];//
+    //TitulosMenu[1] = ["\t\t   Conceptos de valoración de empresas.",3];//
+    //TitulosMenu[2] = ["\t\t   Diligenciar la herramienta de valoración de empresas.",10];//
+    //TitulosMenu[3] = ["\t\t   Análisis y explicación de las fuentes de los capitales de riesgo.",16];//
+    //TitulosMenu[4] = ["\t\t   Establecer las diferencias entre crédito, crowdfunding, crowdlending, crowdsourcing e inversión.",23];//
+    //TitulosMenu[5] = ["\t\t   Dar a conocer los programas de inversión que ofrece la CCB y cómo acceder a estos.",29];//
+    //TitulosMenu[6] = ["\t\t   Validación de conocimientos",33];//
+
+    //TitulosAdicional[0]= ["     Legal",1];//
+    //TitulosAdicional[1]= ["     Ayuda",1];//
+    //Inicio//-------------------------------------------------------------------------------------------------------------------------------
+
+var EscenaActual =  1
 var pasoAct
-var pasoTot = 1
-var HabilitarBotonSiguiente = false
-var CambiarEscena = false
-var Sonido = 1
-var CaptionOn = true
-var Inicio = false
+var pasoTot                 =  1
+var HabilitarBotonSiguiente =  false
+var CambiarEscena           =  false
+var Sonido                  =  1
+var CaptionOn               =  true
+var Inicio                  =  false
 
-var MostrandoAyuda = false
-var MostrandoMenu = false
+var MostrandoAyuda =  false
+var MostrandoMenu  =  false
 
 var CompositionEdge
 
@@ -134,14 +134,14 @@ $('.ocultos').hide()
 $('#Elemento-Indicador').hide()
 $('#BotonAtras').hide()
 
-//MENUS
-$('#Menu_1').show() //AG
-$('#Menu_3').show() //AG
-$('#Menu_10').show() //AG
-$('#Menu_16').show() //AG
-$('#Menu_23').show() //AG
-$('#Menu_29').show() //AG
-$('#Menu_33').show() //AG
+                        //MENUS
+$('#Menu_1').show()     //AG
+$('#Menu_3').show()     //AG
+$('#Menu_10').show()    //AG
+$('#Menu_16').show()    //AG
+$('#Menu_23').show()    //AG
+$('#Menu_29').show()    //AG
+$('#Menu_33').show()    //AG
 
 $('#VentanaMenu').hide()
 $('#EnlacesMenu').hide()
@@ -149,14 +149,14 @@ $('#EnlacesMenu').hide()
 $('.BotonAyuda').css('cursor', 'pointer')
 $('.BotonLega').css('cursor', 'pointer')
 
-var maxWidth = $('#content').width()
-var maxHeight = $('#content').height()
+var maxWidth  =  $('#content').width()
+var maxHeight =  $('#content').height()
 
-var iframeWidth = $('#frame').width()
-var iframeHeight = $('#frame').height()
+var iframeWidth  =  $('#frame').width()
+var iframeHeight =  $('#frame').height()
 
-var windowWidth = $(window).width()
-var windowHeight = $(window).height()
+var windowWidth  =  $(window).width()
+var windowHeight =  $(window).height()
 
 var isMobile = {
     Android: function() {
@@ -190,11 +190,11 @@ var isMobile = {
 $('#frame').hide()
 
 $('#content').css({
-    'transform-origin': '0 0',
-    '-ms-transform-origin': '0 0',
-    '-webkit-transform-origin': '0 0',
-    '-moz-transform-origin': '0 0',
-    '-o-transform-origin': '0 0',
+    'transform-origin':           '0 0',
+    '-ms-transform-origin':       '0 0',
+    '-webkit-transform-origin':   '0 0',
+    '-moz-transform-origin':      '0 0',
+    '-o-transform-origin':        '0 0',
 })
 
 $('#Intro').hide()
@@ -214,31 +214,31 @@ $(window).load(function() {
 })
 
 function EscalarIframe() {
-    // alert();
-    var stage = $('#content') // Set a reusable variable to reference the stage
-    var parent = $('#content').parent() // Set a reusable variable to reference the parent container of the stage
+                                           // alert();
+    var stage = $('#content')              // Set a reusable variable to reference the stage
+    var parent = $('#content').parent()    // Set a reusable variable to reference the parent container of the stage
 
-    var parentWidth = $(window).width() // Tamaño del ancho del navegador(width)
-    var parentHeight = $(window).height() // tamaño del alto del navegador(height)
+    var parentWidth  =  $(window).width()     // Tamaño del ancho del navegador(width)
+    var parentHeight =  $(window).height()    // tamaño del alto del navegador(height)
 
-    var stageWidth = stage.width() // tamaño del div content en ancho(width)
-    var stageHeight = stage.height() // tamaño del div content en alto(height)
+    var stageWidth  =  stage.width()     // tamaño del div content en ancho(width)
+    var stageHeight =  stage.height()    // tamaño del div content en alto(height)
 
-    var desiredWidth = Math.round(parentWidth * 1) // Dejamos el with como numero entero
-    var desiredHeight = Math.round(parentHeight * 1) // Dejamos el height como numero entero
+    var desiredWidth  =  Math.round(parentWidth * 1)     // Dejamos el with como numero entero
+    var desiredHeight =  Math.round(parentHeight * 1)    // Dejamos el height como numero entero
 
-    var rescaleWidth = desiredWidth / stageWidth // Dividimos: tamaño actual de la pantalla/ por tamaño del content (width)
-    var rescaleHeight = desiredHeight / stageHeight // Dividimos: tamaño actual de la pantalla/ por tamaño del content (height)
+    var rescaleWidth  =  desiredWidth / stageWidth      // Dividimos: tamaño actual de la pantalla/ por tamaño del content (width)
+    var rescaleHeight =  desiredHeight / stageHeight    // Dividimos: tamaño actual de la pantalla/ por tamaño del content (height)
 
-    //var rescale = rescaleWidth;
-    //alert(rescaleWidth+"  "+rescaleHeight);
+        //var rescale = rescaleWidth;
+        //alert(rescaleWidth+"  "+rescaleHeight);
 
     if (rescaleWidth > 1 && rescaleHeight > 1) {
-        rescale = 1
+        rescale =  1
     } else if (rescaleWidth > rescaleHeight) {
-        rescale = rescaleHeight
+        rescale =  rescaleHeight
     } else {
-        rescale = rescaleWidth
+        rescale =  rescaleWidth
     }
 
     stage.css('transform', 'scale(' + rescale + ')')
@@ -250,54 +250,54 @@ function EscalarIframe() {
 
     parent.width(stageWidth * rescale)
     parent.height(stageHeight * rescale)
-    parent.css('margin', '0px auto') //autoajustamos la pantalla
+    parent.css('margin', '0px auto')    //autoajustamos la pantalla
 }
 
 $(window).resize(function(evt) {
     if (Inicio) EscalarIframe()
 })
 
-var $_GET = {}
+var $_GET =  {}
 
 document.location.search.replace(/\??(?:([^=]+)=([^&]*)&?)/g, function() {
     function decode(s) {
         return decodeURIComponent(s.split('+').join(' '))
     }
-    $_GET[decode(arguments[1])] = decode(arguments[2])
+    $_GET[decode(arguments[1])] =  decode(arguments[2])
 })
 
-//SCORM
-var scorm = pipwerks.SCORM //Shortcut
-var lmsConnected = false
+                              //SCORM
+var scorm = pipwerks.SCORM    //Shortcut
+var lmsConnected =  false
 
 function initCourse() {
-    lmsConnected = scorm.init()
+    lmsConnected =  scorm.init()
     if (lmsConnected) {
-        var completionstatus = scorm.get('cmi.core.lesson_status')
-        var escenaScorm = scorm.get('cmi.core.lesson_location') + ''
+        var completionstatus =  scorm.get('cmi.core.lesson_status')
+        var escenaScorm      =  scorm.get('cmi.core.lesson_location') + ''
 
-        var tiemposesion = scorm.get('cmi.core.total_time')
+        var tiemposesion =  scorm.get('cmi.core.total_time')
         console.log(' tiempo de sesion ===' + tiemposesion)
 
         if (
-            tiemposesion == '' ||
-            tiemposesion == 'null' ||
-            tiemposesion == undefined
+            tiemposesion ==  '' ||
+            tiemposesion ==  'null' ||
+            tiemposesion ==  undefined
         ) {
-            tiemposesion = '0000:00:01'
+            tiemposesion =  '0000:00:01'
             iniciartiempo()
         } else {
             iniciartiempo()
         }
         if (escenaScorm == '' || escenaScorm == 'null') {
-            EscenaActual = 1
+            EscenaActual =  1
         } else {
-            EscenaActual = parseInt(escenaScorm)
+            EscenaActual =  parseInt(escenaScorm)
         }
         if (completionstatus === 'completed' || completionstatus === 'passed') {
             handleError('Ya finalizo el curso')
         } else {
-            var success = scorm.set('cmi.core.lesson_status', 'incomplete')
+            var success =  scorm.set('cmi.core.lesson_status', 'incomplete')
             scorm.save()
         }
     } else {
@@ -307,7 +307,7 @@ function initCourse() {
 
 function setPorcentajeAvance(porcentaje) {
     if (lmsConnected) {
-        success = scorm.set('cmi.core.score.raw', '' + porcentaje)
+        success =  scorm.set('cmi.core.score.raw', '' + porcentaje)
         scorm.save()
         if (!success) {
             handleError('Error: No se pudo guardar el avance del curso!')
@@ -324,31 +324,31 @@ function iniciartiempo() {
 function relog() {
     segundos++
     if (segundos < 10) {
-        segundos = '0' + segundos
+        segundos =  '0' + segundos
     }
 
     if (segundos == 60) {
         minutos++
-        if (minutos < 10) minutos = '0' + minutos
-        segundos = '00'
+        if (minutos < 10) minutos =  '0' + minutos
+           segundos               =  '00'
 
         if (minutos == 60) {
             horas++
             if (horas < 10) {
-                horas = '0' + horas
+                horas =  '0' + horas
             }
-            minutos = '00'
+            minutos =  '00'
         }
     }
     console.log(
         'horas = ' + horas + ' minutos= ' + minutos + '   segundos=  ' + segundos
     )
-    tiemposesion = horas + ':' + minutos + ':' + segundos
+    tiemposesion =  horas + ':' + minutos + ':' + segundos
 }
 
 function setComplete() {
     if (lmsConnected) {
-        var success = scorm.set('cmi.core.lesson_status', 'completed')
+        var success =  scorm.set('cmi.core.lesson_status', 'completed')
         scorm.save()
         if (!success) {
             handleError('Error: No se pudo guardar el estado del curso!')
@@ -360,7 +360,7 @@ function setComplete() {
 
 function setEscena(escenaGuardar) {
     if (lmsConnected) {
-        var success = scorm.set('cmi.core.lesson_location', '' + escenaGuardar)
+        var success =  scorm.set('cmi.core.lesson_location', '' + escenaGuardar)
         scorm.save()
         if (!success) {
             handleError('Error: No se pudo guardar la escena del curso!')
@@ -377,9 +377,9 @@ function cerrarSCORM() {
 }
 
 function handleError(msg) {
-    //   alert(msg);
+        //   alert(msg);
 }
-//SCORM
+    //SCORM
 
 function buscarEscena(nombreEscena) {
     for (var i = 0; i < InfoEscena.length; i++) {
@@ -411,22 +411,22 @@ function legalAbrir() {
 }
 
 function IniciarEscena() {
-    var Temp = 1
+    var Temp =  1
 
     $(document).prop('title', NombreModulo)
 
-    if ($_GET['EscenaActual']) Temp = $_GET['EscenaActual']
+    if ($_GET['EscenaActual']) Temp =  $_GET['EscenaActual']
 
-    EscenaActual = buscarEscena(Temp)
+    EscenaActual =  buscarEscena(Temp)
 
-    if (ActivarScorm) initCourse() //SCORM
+    if (ActivarScorm) initCourse()    //SCORM
 
     Iniciarmenu()
 
     $('#Intro').hide()
     $('#carga').hide()
 
-    /*if(isMobile.any())
+        /*if(isMobile.any())
 	{
 		$("#BotonAdelante").hide();
 
@@ -457,9 +457,9 @@ function IniciarEscena() {
 	else
 	{*/
     $('#carga').show()
-        //AgregarAudios();
+            //AgregarAudios();
 
-    //initAudio();
+        //initAudio();
 
     setTimeout(function() {
         Cargar_Escena()
@@ -469,61 +469,61 @@ function IniciarEscena() {
         EscalarIframe()
     }, 750)
 
-    //}
+        //}
 
     $('#BotonAdelante').click(Siguiente_Escena)
 
     $('#BotonAtras').click(Anterior_Escena)
 
-    //Llamar escenas
-    $('#Menu_1').click(Escena1) //AG
-    $('#Menu_3').click(Escena3) //AG
-    $('#Menu_10').click(Escena10) //AG
-    $('#Menu_16').click(Escena16) //AG
-    $('#Menu_23').click(Escena23) //AG
-    $('#Menu_29').click(Escena29) //AG
-    $('#Menu_33').click(Escena33) //AG
+                                     //Llamar escenas
+    $('#Menu_1').click(Escena1)      //AG
+    $('#Menu_3').click(Escena3)      //AG
+    $('#Menu_10').click(Escena10)    //AG
+    $('#Menu_16').click(Escena16)    //AG
+    $('#Menu_23').click(Escena23)    //AG
+    $('#Menu_29').click(Escena29)    //AG
+    $('#Menu_33').click(Escena33)    //AG
 
-    //Funciones escenas
+        //Funciones escenas
     function Escena1() {
-        //AG
-        EscenaActual = 1
+            //AG
+        EscenaActual =  1
         Cargar_Escena()
     }
 
     function Escena3() {
-        //AG
-        EscenaActual = 3
+            //AG
+        EscenaActual =  3
         Cargar_Escena()
     }
 
     function Escena10() {
-        //AG
-        EscenaActual = 10
+            //AG
+        EscenaActual =  10
         Cargar_Escena()
     }
 
     function Escena16() {
-        //AG
-        EscenaActual = 16
+            //AG
+        EscenaActual =  16
         Cargar_Escena()
     }
 
     function Escena23() {
-        //AG
-        EscenaActual = 23
+            //AG
+        EscenaActual =  23
         Cargar_Escena()
     }
 
     function Escena29() {
-        //AG
-        EscenaActual = 29
+            //AG
+        EscenaActual =  29
         Cargar_Escena()
     }
 
     function Escena33() {
-        //AG
-        EscenaActual = 33
+            //AG
+        EscenaActual =  33
         Cargar_Escena()
     }
 
@@ -531,63 +531,63 @@ function IniciarEscena() {
 
     function Alerta_prueba() {
         if (CaptionOn == true) {
-            CaptionOn = false
+            CaptionOn =  false
             OnOffCaption()
         } else {
-            CaptionOn = true
+            CaptionOn =  true
             OnOffCaption()
         }
     }
-    //----------------------------------------INICIO LEGAL---------------------------------------------------
+        //----------------------------------------INICIO LEGAL---------------------------------------------------
     $('.BotonLega').click(function() {
             $('.VentanaAyuda').html('')
             $('#BotonMenu').hide('drop', { direction: 'up' }, 1000)
             $('#BotonMenu2').hide()
-            MostrandoMenu = false
+            MostrandoMenu =  false
             if (!MostrandoAyuda) {
-                MostrandoAyuda = true
+                MostrandoAyuda =  true
                 $('.VentanaAyuda').prepend(
                     '<div id="BotonCerrar"><img src="recursos/boton_cerrar.png"></div>'
                 )
                 $('.VentanaAyuda').append('<img src="recursos/pagina_legal_m0.png">')
                 $('.VentanaAyuda').css({ 'z-index': '2000' })
             } else {
-                MostrandoAyuda = false
+                MostrandoAyuda =  false
                 $('.VentanaAyuda').html('')
             }
         })
-        //----------------------------------------FIN LEGAL---------------------------------------------------
+            //----------------------------------------FIN LEGAL---------------------------------------------------
 
-    //----------------------------------------INICIO AYUDA---------------------------------------------------
+        //----------------------------------------INICIO AYUDA---------------------------------------------------
 
     $('.BotonAyuda').click(function() {
         $('.VentanaAyuda').html('')
         $('#BotonMenu').hide('drop', { direction: 'up' }, 1000)
         $('#BotonMenu2').hide()
-        MostrandoMenu = false
+        MostrandoMenu =  false
         if (!MostrandoAyuda) {
-            MostrandoAyuda = true
+            MostrandoAyuda =  true
             $('.VentanaAyuda').prepend(
                 '<div id="BotonCerrar"><img src="recursos/boton_cerrar.png"></div>'
             )
             $('.VentanaAyuda').append('<img src="recursos/ventana_ayuda.png">')
             $('.VentanaAyuda').css({ 'z-index': '2000' })
         } else {
-            MostrandoAyuda = false
+            MostrandoAyuda =  false
             $('.VentanaAyuda').html('')
         }
     })
     $('.VentanaAyuda').on('click', '#BotonCerrar', function() {
-        MostrandoAyuda = false
+        MostrandoAyuda =  false
         $('.VentanaAyuda').html('')
     })
 
-    //----------------------------------------FIN AYUDA----------------------------------------------------------
-    //----------------------------------INICIO TRANSPARENCIA MENU------------------------------------------------
+        //----------------------------------------FIN AYUDA----------------------------------------------------------
+        //----------------------------------INICIO TRANSPARENCIA MENU------------------------------------------------
 
-    //----------------------------------FIN TRANSPARENCIA MENU------------------------------------------------
+        //----------------------------------FIN TRANSPARENCIA MENU------------------------------------------------
 
-    //----------------------------------INICIO MENU FUNCIONES------------------------------------------------
+        //----------------------------------INICIO MENU FUNCIONES------------------------------------------------
     $('.BotonMenu')
         .unbind()
         .click(function() {
@@ -596,16 +596,16 @@ function IniciarEscena() {
                 $('#BotonMenu').show('drop', { direction: 'up' }, 500)
                 $('.VentanaAyuda').append('<img src="recursos/transparencia_menu.png">')
                 $('.VentanaAyuda').css({ 'z-index': '2000' })
-                    //,'margin-left':'-1px','margin-top': '-1px'
-                MostrandoMenu = true
+                            //,'margin-left':'-1px','margin-top': '-1px'
+                MostrandoMenu =  true
             } else {
                 $('#BotonMenu').hide('drop', { direction: 'up' }, 300)
                 $('.VentanaAyuda').html('')
-                MostrandoMenu = false
+                MostrandoMenu =  false
             }
         })
 
-    //----------------------------------FIN MENU FUNCIONES------------------------------------------------
+        //----------------------------------FIN MENU FUNCIONES------------------------------------------------
     $('.BotonLegal')
         .unbind()
         .click(function() {
@@ -626,11 +626,11 @@ function IniciarEscena() {
     })
 
     $('.request-fullscreen').each(function() {
-        var target = $($(this).attr('rel')).addClass('target-fullscreen')
+        var target =  $($(this).attr('rel')).addClass('target-fullscreen')
 
         $(this).click(function() {
             target.requestFullScreen()
-                //	  OnOffFullscreen();
+                    //	  OnOffFullscreen();
         })
     })
 
@@ -644,7 +644,7 @@ function Elemento_Indicador_Titilar() {
         .animate({ width: 60, height: 60 }, 50)
         .animate({ width: 50, height: 50 }, 50)
 
-    tiempopar = setTimeout('Elemento_Indicador_Titilar()', 1500)
+    tiempopar =  setTimeout('Elemento_Indicador_Titilar()', 1500)
 }
 
 function Elemento_Indicador_Quitar_Titilar() {
@@ -654,12 +654,12 @@ function Elemento_Indicador_Quitar_Titilar() {
 
 function abrirURL(paramURL, VentanaNueva) {
     if (VentanaNueva == undefined || VentanaNueva == '' || VentanaNueva == null)
-        parent.window.location.href = paramURL
+        parent.window.location.href =  paramURL
     else window.open(paramURL, '_blank')
 }
 
 function Siguiente_Escena() {
-    //DetenerAudio();
+        //DetenerAudio();
 
     if (pasoAct == pasoTot) {
         if (EscenaActual < CantidadEscenas) {
@@ -673,7 +673,7 @@ function Siguiente_Escena() {
 }
 
 function Anterior_Escena() {
-    //DetenerAudio();
+        //DetenerAudio();
     if (pasoAct == 1) {
         if (EscenaActual > 1) {
             EscenaActual--
@@ -686,19 +686,19 @@ function Anterior_Escena() {
 }
 
 function Cargar_Escena() {
-    Inicio = false
-        //DetenerAudio();
+    Inicio =  false
+            //DetenerAudio();
 
-    pasoAct = 1
+    pasoAct =  1
 
     DefinirBotones()
 
     if (UtilizaFondos) DefinirFondo()
 
-    var Porcentaje = 100 / CantidadEscenas
-    var Total = Porcentaje * EscenaActual
+    var Porcentaje =  100 / CantidadEscenas
+    var Total      =  Porcentaje * EscenaActual
 
-    if (ActivarScorm) setPorcentajeAvance(Math.round(Total)) //SCORM
+    if (ActivarScorm) setPorcentajeAvance(Math.round(Total))    //SCORM
 
     if (TieneBarraPorcentaje) {
         $('.barra-progreso')
@@ -730,13 +730,13 @@ function Cargar_Escena() {
     })
 
     if (ActivarScorm) {
-        setEscena(EscenaActual) //SCORM
+        setEscena(EscenaActual)    //SCORM
         if (EscenaActual == CantidadEscenas) {
-            setComplete() //SCORM
+            setComplete()    //SCORM
         }
     }
 
-    Inicio = true
+    Inicio =  true
 }
 
 function cambiarPaso() {
@@ -753,39 +753,39 @@ function DefinirBotones() {
     if (EscenaActual == 1) {
         $('#BotonAtras').hide()
 
-        //Mostrar menú
-        $('#Menu_1').show() //AG
-        $('#Menu_3').show() //AG
-        $('#Menu_10').show() //AG
-        $('#Menu_16').show() //AG
-        $('#Menu_23').show() //AG
-        $('#Menu_29').show() //AG
-        $('#Menu_33').show() //AG
+                                //Mostrar menú
+        $('#Menu_1').show()     //AG
+        $('#Menu_3').show()     //AG
+        $('#Menu_10').show()    //AG
+        $('#Menu_16').show()    //AG
+        $('#Menu_23').show()    //AG
+        $('#Menu_29').show()    //AG
+        $('#Menu_33').show()    //AG
 
         $('#BotonAdelante').show()
     } else if (EscenaActual == CantidadEscenas) {
         $('#BotonAtras').show()
 
-        //Mostrar menú
-        $('#Menu_1').show() //AG
-        $('#Menu_3').show() //AG
-        $('#Menu_10').show() //AG
-        $('#Menu_16').show() //AG
-        $('#Menu_23').show() //AG
-        $('#Menu_29').show() //AG
-        $('#Menu_33').show() //AG
+                                //Mostrar menú
+        $('#Menu_1').show()     //AG
+        $('#Menu_3').show()     //AG
+        $('#Menu_10').show()    //AG
+        $('#Menu_16').show()    //AG
+        $('#Menu_23').show()    //AG
+        $('#Menu_29').show()    //AG
+        $('#Menu_33').show()    //AG
     } else {
         $('#BotonAtras').show()
 
-        //Mostrar menú
-        $('#Menu_1').show() //AG
-        $('#Menu_3').show() //AG
-        $('#Menu_10').show() //AG
-        $('#Menu_16').show() //AG
-        $('#Menu_23').show() //AG
-        $('#Menu_29').show() //AG
-        $('#Menu_33').show() //AG
-        $('#Modulos').show() //AG
+                                //Mostrar menú
+        $('#Menu_1').show()     //AG
+        $('#Menu_3').show()     //AG
+        $('#Menu_10').show()    //AG
+        $('#Menu_16').show()    //AG
+        $('#Menu_23').show()    //AG
+        $('#Menu_29').show()    //AG
+        $('#Menu_33').show()    //AG
+        $('#Modulos').show()    //AG
         $('#BotonAdelante').show()
     }
 }
@@ -850,7 +850,7 @@ function Mostrar_Elemento_Indicador(Apuntando, MarginLeft, MarginTop) {
 }
 
 function Ocultar_Elemento_Indicador() {
-    //DetenerAudio();
+        //DetenerAudio();
     if (TieneIndicador) {
         $('#Elemento-Indicador').hide()
         $('#Elemento-Indicador').animate({ marginTop: '0px', marginLeft: '0px' }, 0)
@@ -858,20 +858,20 @@ function Ocultar_Elemento_Indicador() {
 }
 
 function Ir_Escena(Pagina) {
-    EscenaActual = Pagina
+    EscenaActual =  Pagina
     Cargar_Escena()
 
-    MostrandoMenu = false
+    MostrandoMenu =  false
     $('#BotonAtras').show()
 
-    //Mostrar menú
-    $('#Menu_1').show() //AG
-    $('#Menu_3').show() //AG
-    $('#Menu_10').show() //AG
-    $('#Menu_16').show() //AG
-    $('#Menu_23').show() //AG
-    $('#Menu_29').show() //AG
-    $('#Menu_33').show() //AG
+                            //Mostrar menú
+    $('#Menu_1').show()     //AG
+    $('#Menu_3').show()     //AG
+    $('#Menu_10').show()    //AG
+    $('#Menu_16').show()    //AG
+    $('#Menu_23').show()    //AG
+    $('#Menu_29').show()    //AG
+    $('#Menu_33').show()    //AG
 
     $('#carga').show()
     $('#frame').hide()
@@ -889,36 +889,36 @@ function EnviarEscenaMenu(Pagina) {
 
 function Cambiar_Escena_Cualquier_Boton() {
     Siguiente_Escena()
-    HabilitarBotonSiguiente = false
+    HabilitarBotonSiguiente =  false
     Ocultar_Elemento_Indicador()
 }
 
 function Cambiar_Paso_Cualquier_Boton() {
     document.getElementById('frame').contentWindow.Siguiente_Paso()
-    HabilitarBotonSiguiente = false
+    HabilitarBotonSiguiente =  false
     Ocultar_Elemento_Indicador()
 }
 
 function setComposition(comp) {
-    CompositionEdge = comp
+    CompositionEdge =  comp
 }
 
-//Audios//-------------------------------------------------------------------------------------------------------------------------------
-//Agrega el listado de audios junto su ID
+    //Audios//-------------------------------------------------------------------------------------------------------------------------------
+    //Agrega el listado de audios junto su ID
 
-/*function AgregarAudios()
+    /*function AgregarAudios()
 {
- var assetsPath = "Escenas/audios/";
+ var assetsPath =  "Escenas/audios/";
 
  createjs.Sound.registerSounds(ArrayAudios, assetsPath);
 }*/
 
-//Hace sonar el audio por medio del ID, la Funcion es la que se ejecutara al final del audio
-/*function PlayAudio(ID, Funcion)
+    //Hace sonar el audio por medio del ID, la Funcion es la que se ejecutara al final del audio
+    /*function PlayAudio(ID, Funcion)
 {
-//var loadProxy = createjs.proxy(this.handleLoad, this);
+    //var loadProxy = createjs.proxy(this.handleLoad, this);
 
- var InstanciaAudio = createjs.Sound.play(ID);
+ var InstanciaAudio =  createjs.Sound.play(ID);
 
  InstanciaAudio.addEventListener("complete", MensajeTerminoAudio);
 
@@ -926,7 +926,7 @@ function setComposition(comp) {
   InstanciaAudio.addEventListener("complete", Funcion);
 }*/
 
-//Le avisa a la escena que detenga la boca del actor, la funcion TerminoAudio debe estar en el primer fotograma de la escena
+    //Le avisa a la escena que detenga la boca del actor, la funcion TerminoAudio debe estar en el primer fotograma de la escena
 function MensajeTerminoAudio() {
     document
         .getElementById('frame')
@@ -935,12 +935,12 @@ function MensajeTerminoAudio() {
         .TerminoAudio()
 }
 
-/*function DetenerAudio()
+    /*function DetenerAudio()
 {
 	createjs.Sound.stop();
 }*/
 
-/*function initAudio()
+    /*function initAudio()
 {
  if (!createjs.Sound.initializeDefaultPlugins())
  {
@@ -950,29 +950,29 @@ function MensajeTerminoAudio() {
  createjs.Sound.play("Vacio");
 }*/
 
-//Precarga//-------------------------------------------------------------------------------------------------------------------------------
+    //Precarga//-------------------------------------------------------------------------------------------------------------------------------
 
-var manifest = ''
+var manifest =  ''
 var preload
-var IniciarCargaEscenas = 0
+var IniciarCargaEscenas =  0
 
 function detectIE() {
-    var ua = window.navigator.userAgent
-    var msie = ua.indexOf('MSIE ')
-    var trident = ua.indexOf('Trident/')
+    var ua      =  window.navigator.userAgent
+    var msie    =  ua.indexOf('MSIE ')
+    var trident =  ua.indexOf('Trident/')
 
     if (msie > 0) {
-        // IE 10 or older => return version number
+            // IE 10 or older => return version number
         return parseInt(ua.substring(msie + 5, ua.indexOf('.', msie)), 10)
     }
 
     if (trident > 0) {
-        // IE 11 (or newer) => return version number
-        var rv = ua.indexOf('rv:')
+            // IE 11 (or newer) => return version number
+        var rv =  ua.indexOf('rv:')
         return parseInt(ua.substring(rv + 3, ua.indexOf('.', rv)), 10)
     }
 
-    // other browser
+        // other browser
     return false
 }
 
@@ -981,9 +981,9 @@ function handleFileLoad(event) {}
 function handleOverallProgress(event) {}
 
 function handleFileProgress(event) {
-    var Progreso = (preload.progress * 100) | 0
+    var Progreso =  (preload.progress * 100) | 0
     if (Progreso >= 2 && IniciarCargaEscenas == 0) {
-        IniciarCargaEscenas = 1
+        IniciarCargaEscenas =  1
         IniciarEscena()
     }
 }
@@ -993,7 +993,7 @@ function loadComplete(event) {}
 function handleFileError(event) {}
 
 function Precarga() {
-    var VersionIE = detectIE()
+    var VersionIE =  detectIE()
 
     if ($_GET['EscenaActual']) IniciarEscena()
     else {
@@ -1007,11 +1007,11 @@ function Precarga() {
                     'data:Application/octet-stream,' + encodeURIComponent(manifest)
             }
 
-            var URLActual = window.location.href.toString()
-            URLActual = URLActual.replace('/index.html', '')
+            var URLActual =  window.location.href.toString()
+                URLActual =  URLActual.replace('/index.html', '')
 
             if (URLActual.substr(URLActual.length - 1) == '/') {
-                URLActual = URLActual.substring(0, URLActual.length - 1)
+                URLActual =  URLActual.substring(0, URLActual.length - 1)
             }
 
             console.log(URLActual)
@@ -1023,27 +1023,27 @@ function Precarga() {
 }
 
 function RealizarPrecarga(Carpeta) {
-    var RutaActual = window.location.href
+    var RutaActual =  window.location.href
     var RutaEscena
 
-    RutaActual = RutaActual.replace('index.html', '')
-    RutaActual = RutaActual.replace('?Precarga=1', '')
+    RutaActual =  RutaActual.replace('index.html', '')
+    RutaActual =  RutaActual.replace('?Precarga=1', '')
 
-    RutaEscena = RutaActual + 'Escenas/'
+    RutaEscena =  RutaActual + 'Escenas/'
     IniciarPrecarga(RutaEscena, Carpeta)
 }
 
 function IniciarPrecarga(Ruta, Carpeta) {
-    var RutaArchivos = Ruta + Carpeta + '/'
+    var RutaArchivos =  Ruta + Carpeta + '/'
     BuscarArchivos(RutaArchivos, CrearManifest)
 }
 
 function PrecargarArchivos() {
-    // Create a preloader. There is no manifest added to it up-front, we will add items on-demand.
-    preload = new createjs.LoadQueue(true)
+        // Create a preloader. There is no manifest added to it up-front, we will add items on-demand.
+    preload =  new createjs.LoadQueue(true)
 
-    // Use this instead to use tag loading
-    //preload = new createjs.LoadQueue(false);
+        // Use this instead to use tag loading
+        //preload = new createjs.LoadQueue(false);
 
     preload.on('fileload', handleFileLoad)
     preload.on('progress', handleOverallProgress)
@@ -1052,41 +1052,41 @@ function PrecargarArchivos() {
     preload.on('complete', loadComplete)
     preload.setMaxConnections(3)
 
-    manifest = manifest.split(',')
-    var CantArchivos = manifest.length
+        manifest     =  manifest.split(',')
+    var CantArchivos =  manifest.length
 
-    var Porcentaje = (CantArchivos * 10) / 100
-    var URLActual = window.location.href.toString()
-    URLActual = URLActual.replace('/index.html', '')
+    var Porcentaje =  (CantArchivos * 10) / 100
+    var URLActual  =  window.location.href.toString()
+        URLActual  =  URLActual.replace('/index.html', '')
 
     if (URLActual.substr(URLActual.length - 1) == '/') {
-        URLActual = URLActual.substring(0, URLActual.length - 1)
+        URLActual =  URLActual.substring(0, URLActual.length - 1)
     }
 
     console.log(URLActual)
 
     while (manifest.length > 0) {
-        var item = manifest.shift()
+        var item =  manifest.shift()
         preload.loadFile(URLActual + item)
     }
 }
 
 function BuscarArchivos(URL, funcion) {
-    var Cont = 0
-    var Temp = ''
+    var Cont =  0
+    var Temp =  ''
 
-    var n = URL.indexOf('/Escenas/')
-    var res = URL.substring(n, URL.length - 1)
+    var n   =  URL.indexOf('/Escenas/')
+    var res =  URL.substring(n, URL.length - 1)
 
     $.ajax({
-        url: URL,
-        async: false,
-        success: function(data) {
+        url:       URL,
+        async:     false,
+        success:   function(data) {
             $(data)
                 .find('a')
                 .each(function() {
                     if (Cont > 0) {
-                        Temp = Temp + res + '/' + $(this).attr('href') + ','
+                        Temp =  Temp + res + '/' + $(this).attr('href') + ','
                     }
                     Cont++
                 })
@@ -1097,14 +1097,14 @@ function BuscarArchivos(URL, funcion) {
 
 function BuscarPrecarga(URL) {
     $.ajax({
-        url: URL,
-        async: false,
-        success: function(data) {
+        url:       URL,
+        async:     false,
+        success:   function(data) {
             CrearManifest(data)
         },
     })
 }
 
 function CrearManifest(TEXTO) {
-    manifest = manifest + TEXTO
+    manifest =  manifest + TEXTO
 }

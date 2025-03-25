@@ -51,131 +51,40 @@ CSS
     <!-----------------------------------------
 		HEADER
 ------------------------------------------>
+
+    <!-- --------botones menu----------
     <div id="main-header-0" class="img-responsive logos-img wow animated bounceInRight" data-wow-delay="0.5"></div>
     <div id="main-header-2" class="img-responsive logos-img wow animated bounceInLeft" data-wow-delay="0.5">
         <div class="lista">
             <ul>
                 <li>
-                    <a href="#" id="menu"><img src="img/Img/Btn_Menu_1.png" alt=""> </a>
+                    <a href="#" id="menu"><img src="img/Img/Btn_Menu_1.png" alt="" />
+                    </a>
                 </li>
                 <li>
-                    <a href="#" id="btn1" onclick="imageAlert()"> <img src="img/Img/Btn_Guardar_1.png" alt=""></a>
+                    <a href="#" id="btn1" onclick="imageAlert()">
+                        <img src="img/Img/Btn_Guardar_1.png" alt="" /></a>
                 </li>
                 <li>
-                    <a href="#popup" id="btn2" data-toggle="modal"><img src="img/Img/Btn_Info_menu_1.png" alt=""> </a>
+                    <a href="#popup" id="btn2" data-toggle="modal"><img src="img/Img/Btn_Info_menu_1.png" alt="" />
+                    </a>
                 </li>
             </ul>
         </div>
     </div>
-    <!-- <-------modal-------->
+    -------modal-------
     <div class="modal fade" id="popup" tabindex="-1" role="dialog" aria-hidden="true">
-
         <div class="modal-dialog-popup" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-
+                    <button type="button" class="close" data-dismiss="modal" aria-label="">
+                <span aria-hidden="true">&times;</span>
+              </button>
                 </div>
                 <div class="modal-body">
-                    <div id="audioguia">
-                        <audio id="sound_avanzar">
-                            <source src="sound/Audio ayuda.mp3"></audio>
-                        <img src="img/Img/GuiaModulo.png" alt="" class="mb-6" />
-                        <!-- <----numeracin guia------------->
-                        <div style="position: absolute; top: 80px;right:215px;">
-                            <div class="Cuerpo">
-                                <div class="ubicacion-guia-botones">
-                                    <button class="redondeo ">1</button>
-                                    <div class="informacion">
-                                        <h6>MENÚ</h6>
-                                        <p>Puedes ir a otra sección del curso
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div style="position: absolute; top: 80px;right:157px;">
-                            <div class="Cuerpo">
-                                <div class="ubicacion-guia-botones ">
-                                    <button class="redondeo ">2</button>
-                                    <div class="informacion">
-                                        <h6>GUARDAR</h6>
-                                        <p>Graba tu avance en el módulo</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div style="position: absolute; top: 80px;right:92px;">
-                            <div class="Cuerpo">
-                                <div class="ubicacion-guia-botones ">
-                                    <button class="redondeo ">3</button>
-                                    <div class="informacion">
-                                        <h6>AYUDA</h6>
-                                        <p>Muestra esta ayuda de navegación</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div style="position: absolute; top: 365px;right:86px;">
-                            <div class="Cuerpo">
-                                <div class="ubicacion-guia-botones ">
-                                    <button class="redondeo ">4</button>
-                                    <div class="informacion">
-                                        <h6>AVANZAR</h6>
-                                        <!-- <p>Avanza a la siguiente página del módulo</p> -->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div style="position: absolute; top: 480px;right:200px;">
-                            <div class="Cuerpo">
-                                <div class="ubicacion-guia-botones ">
-                                    <button class="redondeo ">5</button>
-                                    <div class="informacion">
-                                        <h6>NUMERACIÓN</h6>
-                                        <p>Muestra el número de la página actual
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div style="position: absolute; top: 340px;right:375px;">
-                            <div class="Cuerpo">
-                                <div class="ubicacion-guia-botones ">
-                                    <button class="redondeo ">6</button>
-                                    <div class="informacion">
-                                        <h6>MÁS INFORMACIÓN</h6>
-                                        <!-- <p>Muestra más información</p> -->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div style="position: absolute; top: 458px;left:258px;">
-                            <div class="Cuerpo">
-                                <div class="ubicacion-guia-botones ">
-                                    <button class="redondeo ">7</button>
-                                    <div class="informacion">
-                                        <h6>PROGRESO</h6>
-                                        <p>Muestra gráficamente tu avance</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div style="position: absolute; top: 365px;left:68px;">
-                            <div class="Cuerpo">
-                                <div class="ubicacion-guia-botones ">
-                                    <button class="redondeo ">8</button>
-                                    <div class="informacion">
-                                        <h6>RETROCEDER</h6>
-                                        <!-- <p>Indica el progreso del usuario en el módulo</p> -->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
+                    <img src="img/Img/GuiaModulo.png" alt="" height="600" class="mb-4" />
                 </div>
-                <div class="modal-footer ">
+                <div class="modal-footer">
                     <button type="button" class="close" data-dismiss="modal" aria-label="">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -183,11 +92,12 @@ CSS
             </div>
         </div>
     </div>
+    <!-- --------final botones menu---------- -->
 
     <!-----------------------------------------
 MENU
 ------------------------------------------>
-    <!--Menu opener-->
+    <!--Menu opener-
     <div class="overlay" id="overlay">
         <nav class="overlay-menu">
             <ul>
@@ -200,71 +110,42 @@ MENU
                     </div>
                 </div>
                 <li>
-                    <a href="#" onclick="parent.postMessage('1', '*');"><i
-                            class="fa fa-home"></i>Inicio</a>
+                    <a href="#" onclick="parent.postMessage('1', '*');"><i class="fa fa-home"></i>Inicio</a>
                 </li>
                 <li>
-                    <a href="#" onclick="parent.postMessage('2', '*');"><i
-                            class="fa fa-arrow-right"></i> Público
+                    <a href="#" onclick="parent.postMessage('2', '*');"><i class="fa fa-arrow-right"></i> Público
                         objetivo</a>
                 </li>
                 <li>
-                    <a href="#" onclick="parent.postMessage('4', '*');"><i
-                            class="fa fa-arrow-right"></i>
-                        Introducción al curso</a>
+                    <a href="#" onclick="parent.postMessage('4', '*');"><i class="fa fa-arrow-right"></i>
+                        Introducción</a>
                 </li>
                 <li>
-                    <a href="#" onclick="parent.postMessage('5', '*');"><i
-                            class="fa fa-arrow-right"></i> Frase
+                    <a href="#" onclick="parent.postMessage('5', '*');"><i class="fa fa-arrow-right"></i> Frase
                         memorable</a>
                 </li>
                 <li>
-                    <a href="#" onclick="parent.postMessage('6', '*');"><i
-                            class="fa fa-arrow-right"></i> Objetivos del
-                        curso</a>
+                    <a href="#" onclick="parent.postMessage('6', '*');"><i class="fa fa-arrow-right"></i> Objetivos</a>
                 </li>
                 <li>
-                    <a href="#" onclick="parent.postMessage('7', '*');"><i
-                            class="fa fa-arrow-right"></i> Objetivos de
-                        aprendizaje</a>
-                </li>
-                <li>
-                    <a href="#" onclick="parent.postMessage('8', '*');"><i
-                            class="fa fa-arrow-right"></i> Mapa
+                    <a href="#" onclick="parent.postMessage('7', '*');"><i class="fa fa-arrow-right"></i> Mapa
                         temático</a>
                 </li>
                 <li>
-                    <a href="#" onclick="parent.postMessage('9', '*');"><i
-                            class="fa fa-arrow-right"></i> MÓDULO 1 –
-                        CRM como eje central de la estrategia del negocio </a>
+                    <a href="#" onclick="parent.postMessage('8', '*');"><i class="fa fa-arrow-right"></i> MÓDULO 1 – GESTIÓN DEL SERVICIO </a>
                 </li>
                 <li>
-                    <a href="#" onclick="parent.postMessage('10', '*');"><i
-                            class="fa fa-arrow-right"></i>
-                        ¿Conceptualmente que significa CRM?</a>
+                    <a href="#" onclick="parent.postMessage('9', '*');"><i class="fa fa-arrow-right"></i>
+                        Introducción</a>
                 </li>
                 <li>
-                    <a href="#" onclick="parent.postMessage('13', '*');"><i
-                            class="fa fa-arrow-right"></i> Definición de CRM
-                    </a>
+                    <a href="#" onclick="parent.postMessage('10', '*');"><i class="fa fa-arrow-right"></i>¿Qué es la gestión del servicio?</a>
                 </li>
                 <li>
-                    <a href="#" onclick="parent.postMessage('16', '*');"><i
-                            class="fa fa-arrow-right"></i>Ventajas del CRM para
-                        las PYMES </a>
+                    <a href="#" onclick="parent.postMessage('21', '*');"><i class="fa fa-arrow-right"></i>Control de las etapas de prestación de los servicios</a>
                 </li>
                 <li>
-                    <a href="#" onclick="parent.postMessage('17', '*');"><i
-                            class="fa fa-arrow-right"></i>Importancia de la
-                        utilización de CRM</a>
-                </li>
-                <li>
-                    <a href="#" onclick="parent.postMessage('18', '*');"><i
-                            class="fa fa-arrow-right"></i>Tipos de CRM</a>
-                </li>
-                <li>
-                    <a href="#" onclick="parent.postMessage('22', '*');"><i
-                            class="fa fa-arrow-right"></i>CRM Gratis</a>
+                    <a href="#" onclick="parent.postMessage('30', '*');"><i class="fa fa-arrow-right"></i>¿Cuándo automatizar un proceso?</a>
                 </li>
             </ul>
         </nav>
@@ -274,185 +155,15 @@ CONTENT
 ------------------------------------------>
 
     <!-- InstanceBeginEditable name="Content" -->
-    <audio autoplay>
-        <source src="sound/CCU CMR A26P14.mp3" type="audio/mp3" />
-    </audio>
-
-    <div class="row fondocontenidos">
-        <div class="container">
-            <h1 class="mt-0">CRM por objetivo o función principal</h1>
-            <br>
-            <div class="col-md-4">
-                <div class="cuerpocard3d wow animated bounceInLeft delay-1s">
-                    <div class="card3d">
-                        <div class="cara adelante capital">
-                            <img src="img/Img/CRMoperativo.png">
-                            <h2>
-                                CRM operativo
-                            </h2>
-                        </div>
-                        <div class="cara atras ">
-                            <h2 class="textCard">
-                                <br>
-                                <br>
-                                <br>
-                                <br>
-                                <div class="container-btn-ligyh-luz">
-                                    <div class="btn-light-luz_info">
-                                        <a href="#modal1" data-toggle="modal"><img src="img/Img/info.png" /></a>
-                                    </div>
-                                </div>
-                            </h2>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="cuerpocard3d wow animated bounceInLeft delay-2s">
-                    <div class="card3d">
-                        <div class="cara adelante capital">
-                            <img src="img/Img/CRMcolaborativo.png">
-                            <h2>
-                                CRM colaborativo
-                            </h2>
-                        </div>
-                        <div class="cara atras ">
-                            <h2 class="textCard">
-
-                                <br>
-                                <br>
-                                <br>
-                                <br>
-                                <div class="container-btn-ligyh-luz">
-                                    <div class="btn-light-luz_info">
-                                        <a href="#modal2" data-toggle="modal"><img src="img/Img/info.png" /></a>
-                                    </div>
-                                </div>
-                            </h2>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="cuerpocard3d wow animated bounceInLeft delay-3s">
-                    <div class="card3d">
-                        <div class="cara adelante capital">
-                            <img src="img/Img/CRManalitico.png">
-                            <h2>
-                                CRM analítico
-                            </h2>
-                        </div>
-                        <div class="cara atras ">
-                            <h2 class="textCard">
-                                <br>
-                                <br>
-                                <br>
-                                <br>
-                                <div class="container-btn-ligyh-luz">
-                                    <div class="btn-light-luz_info">
-                                        <a href="#modal3" data-toggle="modal"><img src="img/Img/info.png" /></a>
-                                    </div>
-                                </div>
-                            </h2>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <br>
-
-        <center>
-            <div class="info">
-                <p>Haga clic en las imagenes para ver más información.</p>
-            </div>
-            <br />
-        </center>
-        <!-- --------final-boton-de-info-botones---------- -->
-    </div>
-    </div>
-
-    <!-- Modal1 -->
-    <div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">CRM operativo
-                    </h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <p>
-                        Se encarga de la gestión general de las relaciones con clientes. Es frecuente que reciba información sobre el nivel de satisfacción de los clientes con la atención y productos de la empresa. Su objetivo es crear estrategias nuevas de aproximación y trato
-                        al público objetivo en todas las etapas del ciclo de ventas (marketing, venta y servicio al cliente). Además, un CRM operativo se encarga de la automatización de procesos para ofrecer una experiencia más cercana en el momento de
-                        interacción entre comprador y empresas. Suele ser el tipo de CRM más común para las empresas que comienzan a utilizar estos servicios.
-                    </p>
-
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-                </div>
-
-            </div>
+    <!-- <audio autoplay>
+      <source src="sound/CAMBIOS/Micro%20CREV%20a2p1.mp3" type="audio/mp3" />
+    </audio> -->
+    <div class="fondofinmodulo">
+        <div class="container espaciado">
+            <div class="mensajefinmodulo wow animated bounceInLeft delay-1s"></div>
+            <div class="confetis wow animated bounceInDown delay-2s"></div>
         </div>
     </div>
-    <!-- Modal1 -->
-    <!-- Modal2 -->
-    <div class="modal fade" id="modal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">CRM colaborativo </h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <p>
-                        Se encarga de monitorear la interacción de los clientes en todos los canales de comunicación. Es el lugar en el que se concentran todas las interacciones posibles que tienen los clientes con el departamento de ventas o servicio a cliente. Por ello la
-                        información que otorga es de suma utilidad para mejorar la relaciónes. Además, facilita la concentración de todas las interacciones con los <i>leads</i> (que se encuentran en una multiplicidad de medios
-                        digitales) y canaliza a aquellas persona que tienen más posibilidades de convertirse en
-                        <i><b>targets</b></i>.
-                    </p>
-
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-                </div>
-
-            </div>
-        </div>
-    </div>
-    <!-- Modal2 -->
-    <!-- Modal3 -->
-    <div class="modal fade" id="modal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">CRM analítico
-                    </h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <p>
-                        Se encarga de analizar la información de los clientes del pasado, los del presente y también de quienes pueden llegar a serlo en el futuro. Establece tendencias, su enfoque es panorámico (el análisis que hace no es específico, sino global) y busca generar
-                        información concreta mediante la recopilación de la mayor cantidad de datos posible. Clasifica a los clientes en grupos y genera perfiles con conductas o preferencias dentro del ciclo de ventas. Esto permite determinar con mayor
-                        exactitud lo que se está buscando y definir por qué tipo de contenido se inclinan para conocer los nuevos servicios o productos que ofrece su empresa.
-                    </p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-                </div>
-
-            </div>
-        </div>
-    </div>
-    <!-- Modal3 -->
 
     <!-- InstanceEndEditable -->
 
@@ -462,18 +173,17 @@ FOOTER
     <div id="footer">
         <div class="container">
             <div class="progress progress-striped active">
-                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 68%">
-                    <span class="sr-only">16% completado</span>
+                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+                    <span class="sr-only">100% completado</span>
                 </div>
             </div>
             <div class="inner-footer">
                 <!--<div class="next-prev"> InstanceBeginEditable name="Navegacion lineal" <a href="16.html"></a>-->
-                <p class="pr-4 pl-4">Página 19 / 37</p>
+                <p class="pr-4 pl-4">Página 19 / 19</p>
                 <!--<a href="18.html"></a>  InstanceEndEditable </div>-->
             </div>
         </div>
     </div>
-
     <!-----------------------------------------
 JAVASCRIPT
 ------------------------------------------>
@@ -490,7 +200,6 @@ JAVASCRIPT
     <!-- InstanceBeginEditable name="Javascript" -->
     <script src="js/accordion/accordion.js"></script>
     <script src="js/owl.carousel.min.js"></script>
-    <script src="js/index.js"></script>
     <script>
         var owl = $('.owl-carousel');
         owl.owlCarousel({
@@ -523,7 +232,7 @@ JAVASCRIPT
     </script>
     <!--Active menu element-->
     <script>
-        $('.overlay ul li:nth-child(4) a').addClass('active')
+        $('.overlay ul li:nth-child(11) a').addClass('active')
     </script>
     <!-- InstanceEndEditable -->
 </body>
